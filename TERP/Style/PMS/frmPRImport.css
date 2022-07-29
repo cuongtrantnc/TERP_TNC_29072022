@@ -1,0 +1,56 @@
+﻿
+/* style css for menu PR Import */
+
+input[type=file]::-webkit-file-upload-button {
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    background: #28a745 linear-gradient(180deg, #48b461, #28a745) repeat-x !important;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.box {
+    background-color: #ffffff;
+    border: 1.8px dashed #dbdde0;
+    border-radius: 14px;
+    padding: 20px;
+}
+
+.box_description{
+    max-width:300px;
+    margin:auto;
+    font-style:italic;
+    font-size:15px;
+    display:block
+}
+
+.box_import{
+    margin-top:20px;
+}
+
+.note{
+    
+}
+
+.note_span{
+    color:red;
+    font-size:15px;
+}
+
+.note_desc{
+    font-size:15px;
+    font-style:italic;
+    display:inline-block;
+}
+
+.note_link{
+    color:blue;
+    font-size:15px;
+    margin-left: 5px;
+    /*cursor: pointer;*/
+    font-style:italic;
+    padding:0;
+    border:none;
+    background-color: inherit;
+}

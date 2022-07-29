@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1525
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TERP", "TERP\TERP.csproj", "{C67EC166-1773-42B0-8EC0-53AF68F0402E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C67EC166-1773-42B0-8EC0-53AF68F0402E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C67EC166-1773-42B0-8EC0-53AF68F0402E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C67EC166-1773-42B0-8EC0-53AF68F0402E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C67EC166-1773-42B0-8EC0-53AF68F0402E}.Debug|x64.Build.0 = Debug|Any CPU
+		{C67EC166-1773-42B0-8EC0-53AF68F0402E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C67EC166-1773-42B0-8EC0-53AF68F0402E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C67EC166-1773-42B0-8EC0-53AF68F0402E}.Release|x64.ActiveCfg = Release|Any CPU
+		{C67EC166-1773-42B0-8EC0-53AF68F0402E}.Release|x64.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {196C366F-0284-4EF2-9251-9EC160D80B2A}
+	EndGlobalSection
+EndGlobal

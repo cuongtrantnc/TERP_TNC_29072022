@@ -1,0 +1,10 @@
+﻿* {
+  box-sizing: border-box; }
+
+.charts {
+  padding-top: 20px; }
+  .charts__item {
+    border-radius: 12px; }
+    .charts__item--header {
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px; }

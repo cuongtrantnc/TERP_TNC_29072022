@@ -1,0 +1,122 @@
+﻿:root {
+    --fontsize: 0.85 rem;
+}
+
+.form-label {
+    font-weight: 500;
+    text-align: right;
+    margin-right: 30px;
+}
+
+.approvalLog {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.approvalLog-label {
+    flex-grow: 2;
+    text-align: center;
+    font-weight: 500;
+}
+
+.approvalLog-input {
+    flex-grow: 3;
+    display: block;
+    height: calc(2.25rem + 2px);
+    padding: 0/375rem 0.75rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #dee2e6;
+    background-clip: padding-box;
+    -webkit-background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+}
+
+.approvalLog-input:focus {
+    outline: 0;
+}
+
+.rowButton {
+    width: 120px;
+    margin-right: 10px;
+}
+
+.POApproval_Condition {
+    display: none;
+}
+
+.POApproval_DetailView {
+    display: none;
+}
+
+.grid-wrapper-maint-browse {
+    max-height: 510px;
+    overflow: auto;
+}
+
+.table.table-modify-maint-browse > tbody {
+    position: relative;
+}
+
+.table.table-modify-maint-browse > tbody > tr:first-child {
+    position: sticky;
+    top: -1px;
+    left: 0;
+}
+
+.table.table-modify-maint-browse .rowstyle td {
+    padding: 3px;
+}
+
+.rowperpage-modify {
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.grid-wrapper-detail-browse {
+    max-height: 260px;
+    overflow: auto;
+}
+
+.table.table-modify-detail-browse > tbody {
+    position: relative;
+}
+
+.table.table-modify-detail-browse > tbody > tr:first-child {
+    position: sticky;
+    top: -1px;
+    left: 0;
+}
+
+.table.table-modify-detail-browse .rowstyle td {
+    padding: 3px;
+}
+
+.table.table-modify-history-browse .rowstyle td {
+    padding: 3px;
+}
+
+.button-font-size {
+    font-size: var(--fontsize);
+}
+
+.fieldSet {
+    /*37ad52*/
+    border: 1px solid #b9c3c5;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.fieldSet_legend {
+    width: auto;
+    border-bottom: none;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-bottom: 0;
+    color: #37ad52;
+    font-family: helvetica, arial, sans-serif;
+    font-size: var(--fontsize);
+}

@@ -1,0 +1,172 @@
+﻿
+/* ĐÂY LÀ FILE CSS CHO BROWSE */
+.rowstyle td {
+    vertical-align:middle;
+}
+
+.rowstyle:hover {
+    background: #f8f9fa;
+}
+.pageStyle td table tbody tr{
+    display:flex
+}
+
+.pageStyle td table tbody tr td {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+
+    min-width: 32px;
+    height: 32px;
+    padding: 0px;
+    margin: 0px 3px;
+
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+    flex-shrink:1;
+}
+
+.pageStyle td table tbody tr td span {
+    /*padding: 0.35rem 0.75rem;*/
+    display: inline-flex;
+    overflow: hidden;
+    vertical-align: middle;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+    background-color: lightgrey;
+}
+
+.pageStyle td table tbody tr td a {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+    flex-shrink: 1;
+}
+
+.pageStyle td table tbody tr td:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+    cursor: pointer;
+}
+
+.card-boxshadow {
+    border-radius: 12px;
+    box-shadow: rgba(145, 158, 171, 0.24) 0px 0px 2px 0px, rgba(145, 158, 171, 0.24) 0px 16px 32px -4px;
+    /*rgb(145 158 171 / 24%) 0px 4px 11px 3px, rgb(145 158 171 / 24%) 0px 16px 32px -4px*/
+}
+
+.card-border {
+    border-radius: 12px;
+}
+
+.bagde-custom_success {
+    height: 22px;
+    min-width: 22px;
+    line-height: 0;
+    border-radius: 8px;
+    cursor: default;
+    -webkit-box-align: center;
+    align-items: center;
+    white-space: nowrap;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding: 0px 8px;
+    color: rgb(34, 154, 22);
+    /*font-size: 0.75rem;*/
+    background-color: rgba(84, 214, 44, 0.16);
+    /*font-weight: 700;*/
+}
+
+.bagde-custom_danger {
+    height: 22px;
+    min-width: 22px;
+    line-height: 0;
+    border-radius: 8px;
+    cursor: default;
+    -webkit-box-align: center;
+    align-items: center;
+    white-space: nowrap;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding: 0px 8px;
+    color: rgb(183, 33, 54);
+    /*font-size: 0.75rem;*/
+    background-color: rgba(255, 72, 66, 0.16);
+    /*font-weight: 700;*/
+}
+
+.header-label_date {
+    font-size: small;
+    font-weight: 300;
+    margin-left: 5px;
+}
+
+.header-format {
+    display: flex;
+    justify-content: center;
+    /* justify-content: space-around; */
+    align-items: center;
+    border: none !important;
+}
+
+.header-selected {
+    width: 100px !important;
+}
+
+.title-padding {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+}
+
+.title-modal {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    border-bottom: 1px solid black;
+}
+
+.itemTemplate {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /*text-align:center*/
+    vertical-align: middle !important;
+}
+
+.itemTemplate-icon {
+    height: 20px;
+    width: 20px;
+    /*padding:0 10px;*/
+}
+
+.itemStyle {
+    vertical-align: middle !important;
+}
+
+.row-modal {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.rowButton-modal {
+    width: 120px;
+}
+
+.rowButton-modal:first-child {
+    margin-right: 10px;
+}
+
+
+
+@media screen and (max-width: 766px) {
+    .row-modal {
+        justify-content: flex-start;
+    }
+
+    .rowButton-modal {
+        width: 100%;
+    }
+}

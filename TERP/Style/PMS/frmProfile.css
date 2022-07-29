@@ -1,0 +1,61 @@
+﻿
+
+.Profile {
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.Profile__avata {
+    margin-right: 20px;
+}
+
+.Profile__infor {
+    flex: 1 1 auto;
+}
+
+.Profile__image {
+    text-align: center;
+}
+
+.Profile__image img {
+    height: 256px;
+    width: 256px;
+    object-fit:cover;
+}
+
+.Profile__upload {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 20px;
+}
+
+.Form__label {
+    font-weight: 500;
+}
+
+.Form__footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 20px 0;
+    margin-left: -15px;
+}
+
+.Form__button {
+    width: 120px;
+}
+
+.Form__button--upload {
+    margin-top: 16px;
+}
+
+@media screen and (max-width: 766px) {
+    .Form__footer {
+        justify-content: flex-start;
+    }
+
+    .Form__button {
+        width: 100%;
+    }
+}
