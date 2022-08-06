@@ -52448,3 +52448,7 @@ a.text-muted:hover {
 .language i {
   color: rgba(0, 0, 0, 0.5);
 }
+
+.input-group-append, .form-control{
+  height:2.15rem;
+}
