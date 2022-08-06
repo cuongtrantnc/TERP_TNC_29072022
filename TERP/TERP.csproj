@@ -46,18 +46,10 @@
     <Reference Include="AjaxControlToolkit">
       <HintPath>Libs\AjaxControlToolkit.dll</HintPath>
     </Reference>
-    <Reference Include="CrystalDecisions.CrystalReports.Engine">
-      <HintPath>c:\program files (x86)\sap businessobjects\crystal reports for .net framework 4.0\common\sap businessobjects enterprise xi 4.0\win32_x86\dotnet\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
-    </Reference>
-    <Reference Include="CrystalDecisions.ReportSource">
-      <HintPath>c:\program files (x86)\sap businessobjects\crystal reports for .net framework 4.0\common\sap businessobjects enterprise xi 4.0\win32_x86\dotnet\CrystalDecisions.ReportSource.dll</HintPath>
-    </Reference>
-    <Reference Include="CrystalDecisions.Shared">
-      <HintPath>c:\program files (x86)\sap businessobjects\crystal reports for .net framework 4.0\common\sap businessobjects enterprise xi 4.0\win32_x86\dotnet\CrystalDecisions.Shared.dll</HintPath>
-    </Reference>
-    <Reference Include="CrystalDecisions.Web">
-      <HintPath>c:\program files (x86)\sap businessobjects\crystal reports for .net framework 4.0\common\sap businessobjects enterprise xi 4.0\win32_x86\dotnet\CrystalDecisions.Web.dll</HintPath>
-    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -654,7 +646,12 @@
     <Content Include="crystalreportviewers13\urlreporting\appletviewer.js" />
     <Content Include="Forms\PMS\frmCriteriaSupplierPerformanceMaint.aspx" />
     <Content Include="Forms\PMS\frmPrintPreview.aspx" />
+    <Content Include="Forms\PMS\frmSupplierComparison.aspx" />
+    <Content Include="Forms\PMS\frmSupplierComparisonReport.aspx" />
     <Content Include="Forms\PMS\frmSupplierEvaluation.aspx" />
+    <Content Include="Forms\PMS\frmSupplierEvaluationReport.aspx" />
+    <Content Include="Forms\PMS\frmSupplierMaintenance.aspx" />
+    <Content Include="Forms\PMS\frmSupplierQuotation.aspx" />
     <Content Include="Forms\Setting\frmEmailNotification.aspx" />
     <Content Include="Images\print.png" />
     <Content Include="Libs\CountEmailJS.js" />
@@ -736,7 +733,10 @@
     <Content Include="Style\PMS\frmPRMaintenance.css" />
     <Content Include="Style\PMS\frmProfile.css" />
     <Content Include="Style\PMS\frmSite.css" />
+    <Content Include="Style\PMS\frmSupplierComparison.css" />
     <Content Include="Style\PMS\frmSupplierEvaluation.css" />
+    <Content Include="Style\PMS\frmSupplierMaintenance.css" />
+    <Content Include="Style\PMS\frmSupplierQuotation.css" />
     <Content Include="Style\PMS\frmUser.css" />
     <Content Include="Style\TERP.css" />
     <Content Include="Theme\.babelrc.js" />
@@ -2851,7 +2851,9 @@
     <Content Include="Theme\plugins\uplot\uPlot.iife.min.js" />
     <Content Include="Theme\plugins\uplot\uPlot.min.css" />
     <Content Include="Theme\starter.html" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CountEmailWs.asmx.cs">
@@ -2879,12 +2881,47 @@
     <Compile Include="Forms\PMS\frmPrintPreview.aspx.designer.cs">
       <DependentUpon>frmPrintPreview.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Forms\PMS\frmSupplierComparison.aspx.cs">
+      <DependentUpon>frmSupplierComparison.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\PMS\frmSupplierComparison.aspx.designer.cs">
+      <DependentUpon>frmSupplierComparison.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PMS\frmSupplierComparisonReport.aspx.cs">
+      <DependentUpon>frmSupplierComparisonReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\PMS\frmSupplierComparisonReport.aspx.designer.cs">
+      <DependentUpon>frmSupplierComparisonReport.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Forms\PMS\frmSupplierEvaluation.aspx.cs">
       <DependentUpon>frmSupplierEvaluation.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Forms\PMS\frmSupplierEvaluation.aspx.designer.cs">
       <DependentUpon>frmSupplierEvaluation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PMS\frmSupplierEvaluationReport.aspx.cs">
+      <DependentUpon>frmSupplierEvaluationReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\PMS\frmSupplierEvaluationReport.aspx.designer.cs">
+      <DependentUpon>frmSupplierEvaluationReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PMS\frmSupplierMaintenance.aspx.cs">
+      <DependentUpon>frmSupplierMaintenance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\PMS\frmSupplierMaintenance.aspx.designer.cs">
+      <DependentUpon>frmSupplierMaintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PMS\frmSupplierQuotation.aspx.cs">
+      <DependentUpon>frmSupplierQuotation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\PMS\frmSupplierQuotation.aspx.designer.cs">
+      <DependentUpon>frmSupplierQuotation.aspx</DependentUpon>
     </Compile>
     <Compile Include="Forms\Setting\frmEmailNotification.aspx.cs">
       <DependentUpon>frmEmailNotification.aspx</DependentUpon>
@@ -3042,6 +3079,18 @@
       <DependentUpon>rpPRDemo.rpt</DependentUpon>
       <SubType>Component</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Report\SupplierComparison.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SupplierComparison.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\SupplierEvaluation.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SupplierEvaluation.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Style\CountEmailWs.asmx.cs">
       <DependentUpon>CountEmailWs.asmx</DependentUpon>
@@ -3420,6 +3469,14 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rpPRDemo.cs</LastGenOutput>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\SupplierComparison.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SupplierComparison.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\SupplierEvaluation.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SupplierEvaluation.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
