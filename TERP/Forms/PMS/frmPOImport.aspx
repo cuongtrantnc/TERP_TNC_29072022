@@ -26,7 +26,7 @@
                     </div>
                 <div class="mt-3 text-md-right">
                     <asp:Button ID="POImport_btQuery" runat="server" Text="Upload" CssClass="btn bg-gradient-success rowButton-modal" OnClick="POImport_btQuery_Click"/>                    
-                    <asp:LinkButton runat="server" ID="POImport_btLink" CssClass="btn bg-gradient-success rowButton-modal" Text="Upload" HtmlEncode="False" OnClick="POImport_btQuery_Click"><i class="fa fa-upload mr-2"></i></asp:LinkButton>  
+                    <%--<asp:LinkButton runat="server" ID="POImport_btLink" CssClass="btn bg-gradient-success rowButton-modal" Text="Upload" HtmlEncode="False" OnClick="POImport_btQuery_Click"><i class="fa fa-upload mr-2"></i></asp:LinkButton>  --%>
                 </div>
             </div>
         </div>

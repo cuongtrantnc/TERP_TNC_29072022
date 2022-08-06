@@ -4,7 +4,7 @@
 input[type=file]::-webkit-file-upload-button {
     color: #ffffff;
     border: none;
-    padding: 10px 15px;
+    padding: 6px 12px;
     background: #28a745 linear-gradient(180deg, #48b461, #28a745) repeat-x !important;
     border-radius: 4px;
     cursor:pointer;
