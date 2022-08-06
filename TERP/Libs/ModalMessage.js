@@ -459,3 +459,78 @@ function showSupplierEvaluation_Form() {
 
     });
 };
+
+//FUNCTION SHOW BLOCK CREATE NEW SUPPLIER && EDIT SUPPLIER  
+function showSupplier_Form() {
+    $(document).ready(function () {
+        $('#SupplierFilter').addClass('supplier_filter');
+        $('#SupplierForm').removeClass('supplier_form');
+
+        $('#btnGoBack').removeClass('action_button-hide');
+        $('#btnCreateNew').addClass('action_button-hide');
+
+        //action for Supplier Mainternance
+        $('#frmSupplierMaintenance_btnUploadNew').removeClass('btn-outline-success');
+        $('#frmSupplierMaintenance_btnUploadNew').addClass('bg-gradient-success');
+
+        //action for Supplier Quotation
+        $('#frmSupplierQuotation_btnUploadNew').removeClass('btn-outline-success');
+        $('#frmSupplierQuotation_btnUploadNew').addClass('bg-gradient-success');
+    });
+};
+
+//FUNCTION SHOW BLOCK IMPORT SUPPLIER
+function showSupplier_Import() {
+    $(document).ready(function () {
+        $('#SupplierFilter').addClass('supplier_filter');
+        $('#SupplierImport').removeClass('supplier_import');
+
+        $('#btnCreateNew').removeClass('action_button-hide');
+        $('#btnUploadNew').addClass('action_button-hide');
+        $('#btnGoBack').removeClass('action_button-hide');
+    });
+};
+
+//FUNCTION SHOW BLOCK ACTION SUPPLIER BROWSE
+function showActionSuppl_View() {
+    $(document).ready(function () {
+
+        $('#Paging_Left').toggleClass('paging_display');
+        $('#Paging_Left').addClass('paging_itemLeft');
+    });
+}
+
+
+//FUNCTION SHOW MODAL UPDATE MENU SUPPLIER
+function showSupplierUpdateModal() {
+    $(document).ready(function () {
+        $('#SupplierModalUpdate').modal('show');
+    });
+};
+
+//FUNCTION SHOW MODAL DELETE MENU SUPPLIER
+function showSupplierDeleteModal() {
+    $(document).ready(function () {
+        $('#SupplierModalDelete').modal('show');
+    });
+};
+
+//FUNCTION SHOW MODAL SUPPLIER COMPARISON REPORT MENU 
+function showComparisonReport() {
+    $(document).ready(function () {
+        $('#SupplierComparison_ViewReport').modal('show');
+    });
+};
+
+//FUNCTION SHOW BLOCK CREATE NEW SUPPLIER EVALUATION && EDIT SUPPLIER EVALUATION
+function showSupplierEvaluation_Form() {
+    $(document).ready(function () {
+        $('#SupplierEvaluationFilter').addClass('supplier_filter');
+        $('#SupplierEvaluationForm').removeClass('supplier_form');
+
+        $('#btnGoBack').removeClass('action_button-hide');
+        $('#btnCreateNew').addClass('action_button-hide');
+
+    });
+};
+
