@@ -6,6 +6,20 @@
     --button_width: 120px;
 }
 
+.title_label {
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.header-menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.action{
+    padding-right:20px;
+}
+
 .action_button {
     min-width: 120px;
     font-size: var(--fontsize);
@@ -17,6 +31,10 @@
 
 .action_button-hide {
     display: none;
+}
+
+.action_button--modify {
+    margin-right: 10px;
 }
 
 .action > span:not(:last-child) {
@@ -37,7 +55,7 @@
 
 .filter_action {
     display: flex;
-    align-items: flex-start;
+    align-items: flex-end;
     flex-direction: column;
 }
 
@@ -50,13 +68,37 @@
     margin: 11px 0;
 }
 
+.filter_label {
+    text-align: right;
+    width: 50% !important;
+}
+
+.filter_label--modify {
+    margin-right: 20px;
+}
+
+.filter_frmlabel--modify {
+    margin-right: calc(30px + 6.26px);
+}
+
+.filter_labelselect2 {
+    margin-right: calc(30px + 1.26px);
+}
+
+.span_require {
+    vertical-align: middle;
+    line-height: normal;
+    margin-left: 10px;
+    margin-right: 20px;
+    color: red;
+}
 
 /* style css for Function Import */
 
 input[type=file]::-webkit-file-upload-button {
     color: #ffffff;
     border: none;
-    padding: 10px 15px;
+    padding: 6px 12px;
     background: #28a745 linear-gradient(180deg, #48b461, #28a745) repeat-x !important;
     border-radius: 4px;
     cursor: pointer;
@@ -127,7 +169,7 @@ input[type=file]::-webkit-file-upload-button {
     margin-bottom: 0;
     color: #37ad52;
     font-family: helvetica, arial, sans-serif;
-    font-size: 17px;
+    font-size: 15px;
 }
 
 
@@ -167,6 +209,7 @@ span > input {
 .paging {
     display: flex;
     align-items: center;
+    justify-content:flex-end;
     font-size: var(--fontsize);
     margin-top: 25px
 }
@@ -177,7 +220,6 @@ span > input {
 }
 
 .form-control {
-    height: auto !important;
     font-size: var(--fontsize) !important;
 }
 
@@ -187,8 +229,74 @@ span > input {
     margin-top: 0.25rem;
     font-size: 80%;
     color: #dc3545;
-    margin-left: calc(100% - 66%);
+    margin-left: calc(100% - 63%);
 }
+
+.is-invalid {
+    padding-right: 0 !important;
+}
+
+.form-control--modify {
+    height: calc(2.15rem + 2px) !important;
+}
+
+.select2-container--default .select2-selection--single {
+    height: calc(2.15rem + 2px) !important;
+}
+
+.select2-search__field {
+    font-size: var(--fontsize);
+}
+
+/* Poppup modal delete  and update Criteria */
+.modal-detail {
+    display: flex;
+    justify-content: flex-start;
+    padding: 24px 24px 16px;
+}
+
+.modal-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FEE2E2;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+    .modal-icon > i {
+        color: #DC2626;
+        --fontsize: 20px;
+    }
+
+.modal-desc {
+    flex-grow: 1;
+    margin-left: 15px;
+}
+
+.modal-text1 {
+    color: #111827;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.modal-text2 {
+    color: #6B7280;
+    margin-top: 10px;
+}
+
+.modal-action {
+    display: flex;
+    justify-content: flex-end;
+    padding: 12px 24px;
+}
+
+
+    .modal-action > input {
+        min-width: 120px;
+        font-size: var(--fontsize);
+    }
 
 @media screen and (max-width:1023px) {
     .filter_action {
