@@ -213,7 +213,7 @@
             <aside class="main-sidebar sidebar-dark-primary elevation-4">
                 <!-- Brand Logo -->
                 <a href="#" class="brand-link d-flex justify-content-center">
-                    <img src="/TERP/Images/tERP_logo.png" alt="TERP" class="embed-responsive" style="max-width: 120px;">
+                    <img src="/TERP/Images/logo-ThinkNextco-white.png" alt="TERP" class="embed-responsive" style="max-width: 120px;">
 
                     <%--span class="brand-text font-weight-light">TERP</span>--%>
                 </a>
