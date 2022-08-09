@@ -1,0 +1,290 @@
+﻿
+
+
+/* Style for menu Evaluate Content Maintenance */
+
+
+:root {
+    --fontsize: 0.85rem;
+    --button_width: 120px;
+}
+
+.title_label {
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.header-menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.action{
+    margin-right:20px;
+}
+
+.action_button {
+    min-width: var(--button_width);
+    font-size: var(--fontsize);
+}
+
+.action_button:not(:last-child) {
+    margin-right: 10px;
+}
+
+.action_button-hide {
+    display: none;
+}
+
+.action > span:not(:last-child) {
+    margin-right: 10px;
+}
+
+
+.filter_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    font-size: var(--fontsize);
+}
+
+.filter_item > input, .filter_item > select {
+    font-size: var(--fontsize);
+}
+
+.filter_action {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.filter_button {
+    min-width: var(--button_width);
+    font-size: var(--fontsize);
+    margin: 10px 0;
+    height: calc(2.15rem + 2px) !important;
+}
+
+/*.filter_button-modifile {
+    height: calc(2.25rem + 2px);
+}*/
+
+.filter_label {
+    text-align: right;
+    width: 50% !important;
+}
+
+.filter_label--modify {
+    margin-right: calc(19px + 5.5px);
+}
+
+.filter_labelselect2 {
+    margin-right: calc(19px + 0.5px);
+}
+
+.filter_frmlabel--modify {
+    margin-right: calc(30px + 6.26px);
+}
+
+.span_require {
+    vertical-align: middle;
+    line-height: normal;
+    margin-left: 10px;
+    margin-right: 20px;
+    color: red;
+}
+/* style css for Function Import Valuate*/
+
+input[type=file]::-webkit-file-upload-button {
+    color: #ffffff;
+    border: none;
+    padding: 6px 12px;
+    background: #28a745 linear-gradient(180deg, #48b461, #28a745) repeat-x !important;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.box {
+    background-color: #ffffff;
+    border: 1.8px dashed #dbdde0;
+    border-radius: 14px;
+    padding: 20px;
+}
+
+.box_description {
+    max-width: 300px;
+    margin: auto;
+    font-style: italic;
+    font-size: var(--fontsize);
+    display: block
+}
+
+.box_import {
+    margin-top: 10px;
+}
+
+.note {
+}
+
+.note_span {
+    color: red;
+    font-size: var(--fontsize);
+}
+
+.note_desc {
+    font-size: var(--fontsize);
+    font-style: italic;
+    display: inline-block;
+}
+
+.note_link {
+    color: blue;
+    font-size: var(--fontsize);
+    margin-left: 5px;
+    /*cursor: pointer;*/
+    font-style: italic;
+    padding: 0;
+    border: none;
+    background-color: inherit;
+}
+
+.box_icon {
+    display: block;
+    color: #78837b;
+    font-size: 40px
+}
+
+.fieldSet {
+    /*37ad52*/
+    border: 1px solid #b9c3c5;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.fieldSet_legend {
+    width: auto;
+    border-bottom: none;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-bottom: 0;
+    color: #37ad52;
+    font-size: 15px;
+}
+
+
+.evaluate_form {
+    display: none;
+}
+
+.evaluate_filter {
+    display: none;
+}
+
+.evaluate_import {
+    display: none;
+}
+
+
+.grview {
+    font-size: var(--fontsize);
+}
+
+.grview_header {
+    width: 1%;
+    white-space: nowrap;
+}
+
+.grview_header > a:hover{
+    cursor:pointer;
+}
+
+.paging {
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+    font-size: var(--fontsize);
+    margin-top: 25px;
+}
+
+.paging_record {
+    width: 60px;
+    height: 21px;
+}
+
+
+.form-control--modify {
+    height: calc(2.15rem + 2px) !important;
+}
+
+.select2-container--default .select2-selection--single {
+    height: calc(2.15rem + 2px) !important;
+}
+
+.select2-search__field {
+    font-size: var(--fontsize);
+}
+
+/* Poppup modal delete evaluate content */
+.modal-detail {
+    display: flex;
+    justify-content: flex-start;
+    padding: 24px 24px 16px;
+}
+
+.modal-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FEE2E2;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.modal-icon > i {
+    color: #DC2626;
+    --fontsize: 20px;
+}
+
+.modal-desc {
+    flex-grow: 1;
+    margin-left: 15px;
+}
+
+.modal-text1 {
+    color: #111827;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.modal-text2 {
+    color: #6B7280;
+    margin-top: 10px;
+}
+
+.modal-action {
+    display: flex;
+    justify-content: flex-end;
+    padding: 12px 24px;
+}
+
+
+.modal-action > input {
+    min-width: 120px;
+    font-size: var(--fontsize);
+}
+
+@media screen and (max-width:1023px) {
+    .filter_action {
+        flex-direction: row;
+    }
+
+    .filter_button {
+        width: 100%;
+    }
+
+    .filter_button:first-child {
+        margin-right: 10px;
+    }
+}
