@@ -6,20 +6,18 @@
 
     <asp:UpdatePanel ID="upPOApprovalMaintControl" runat="server">
         <ContentTemplate>
-            <div class="top">
-                <div style="width: 100%" class="title-padding">
-                    <asp:Label ID="POApprovalMaintenance_lblModuleTitle" runat="server" Text="PO Approval Maintenance" Font-Bold="True" CssClass="h4"></asp:Label>
-                </div>
+            <div class="top title-padding" style="width: 100%">
+                <asp:Label ID="POApprovalMaintenance_lblModuleTitle" runat="server" Text="PO Approval Maintenance" Font-Bold="True" CssClass="h4"></asp:Label>
                 <div class="Create">
                     <asp:Button ID="POApprovalMaintenance_btnCreate" runat="server" Text="Create" CssClass="btn bg-gradient-success Create-button button-font-size" OnClick="POApprovalMaintenance_btnCreate_Click" />
                 </div>
-            </div>
-            <%----------------Filter-----------------------%>
+            </div>            
 
-            <div class="filter card card-border card-boxshadow">
+            <div class="filter card card-border card-boxshadow" style="overflow: auto;">
+                <%----------------Filter-----------------------%>
                 <fieldset class="fieldSet">
                     <legend class="fieldSet_legend">
-                        <asp:Label runat="server" ID="POApprovalMaintenance_fieldSetFilter" Text="Filter"></asp:Label>
+                        <asp:Label runat="server" ID="POApprovalMaintenance_fieldSetFilter" Text="Filter Condition"></asp:Label>
                     </legend>
                     <div class="filter-list">
                         <div class="row">
@@ -47,14 +45,58 @@
                         </div>
                     </div>
                 </fieldset>
-            </div>
+                <%----------------End Filter-----------------------%>
 
-            <%----------------End Filter-----------------------%>
+                <%----------------Maint Browse---------------------%>
+                    <asp:UpdatePanel ID="upPOApprovalMaintBrowse" runat="server">
+                        <ContentTemplate>
+                            <div class="d-flex align-items-center rowperpage-modify">
+                                <asp:Label ID="POApprovalMaintenance_lblRecordPerPage" runat="server" Text="Record Per Page" CssClass="mr-3"></asp:Label>
+                                <asp:DropDownList ID="ddRecordPerPage" runat="server" CssClass="" DataSourceID="dsRowPerPage" DataTextField="value" DataValueField="value" AutoPostBack="True" OnSelectedIndexChanged="ddRecordPerPage_SelectedIndexChanged" />
+                                &nbsp;/&nbsp;
+                                <asp:Label ID="lblTotal" runat="server" Text="0" CssClass="mr-3"></asp:Label>
+                            </div>
+                            <div class="grid-wrapper" id="poAppovalmaint-scroll">
+                                <asp:GridView ID="grPOApprovalMaintenance" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" ShowHeaderWhenEmpty="True"
+                                    CssClass="table table-bordered table-modify" AllowPaging="True" DataSourceID="dsPOApprovalMaintenanceBrowse" OnRowDataBound="grPOApprovalMaintenance_RowDataBound">
+                                    <RowStyle CssClass="rowstyle" />
+                                    <Columns>
+                                        <asp:BoundField DataField="approval_code" SortExpression="approval_code" HeaderText="Approval Code" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center"></asp:BoundField>
+
+                                        <asp:BoundField DataField="description" SortExpression="description" HeaderText="Description" HeaderStyle-HorizontalAlign="Center">
+                                            <HeaderStyle HorizontalAlign="Center"></HeaderStyle>
+                                        </asp:BoundField>
+
+                                        <asp:TemplateField HeaderText="Status" SortExpression="status">
+                                            <EditItemTemplate>
+                                                <asp:TextBox ID="lblStatus" runat="server" Text='<%# Bind("status") %>'></asp:TextBox>
+                                            </EditItemTemplate>
+                                            <ItemTemplate>
+                                                <asp:Label ID="lblStatus" runat="server" Text='<%# Bind("status") %>'></asp:Label>
+                                            </ItemTemplate>
+                                            <HeaderStyle HorizontalAlign="Center" />
+                                            <ItemStyle CssClass="text-center" />
+                                        </asp:TemplateField>
+
+                                        <asp:TemplateField HeaderText="Option" HeaderStyle-Width="10px">
+                                            <ItemTemplate>
+                                                <asp:ImageButton ID="btEdit" runat="server" ImageUrl="~/Images/edit.png" Width="20px" Height="20px" OnClick="btEdit_Click" />
+                                            </ItemTemplate>
+                                            <ItemStyle CssClass="text-center" />
+                                        </asp:TemplateField>
+
+                                    </Columns>
+                                    <FooterStyle BackColor="#e9ecef" Font-Bold="True" />
+                                    <HeaderStyle BackColor="#e9ecef" HorizontalAlign="Center" />
+                                    <PagerStyle CssClass="pageStyle" HorizontalAlign="Center" />
+                                </asp:GridView>
+                            </div>
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
+                <%----------------End Maint Browse-------------------%>
+            </div>
         </ContentTemplate>
     </asp:UpdatePanel>
-
-    <%----------------END Create Button-----------------------%>
-
 
     <%----------------------------Modal-------------------------------%>
     <div class="modal fade" id="POapprovalModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static">
@@ -164,61 +206,7 @@
     </div>
     <%----------------------------End Modal-------------------------------%>
 
-    <%----------------------------Maint Browse-------------------------------%>
-    <div class="row">
-        <div class="col-md-12">
-            <div class="card card-border card-boxshadow mt-3">
-                <div class="card-body" style="overflow: auto;">
-                    <asp:UpdatePanel ID="upPOApprovalMaintBrowse" runat="server">
-                        <ContentTemplate>
-                            <div class="d-flex align-items-center rowperpage-modify">
-                                <asp:Label ID="POApprovalMaintenance_lblRecordPerPage" runat="server" Text="Record Per Page" CssClass="mr-3"></asp:Label>
-                                <asp:DropDownList ID="ddRecordPerPage" runat="server" CssClass="" DataSourceID="dsRowPerPage" DataTextField="value" DataValueField="value" AutoPostBack="True" OnSelectedIndexChanged="ddRecordPerPage_SelectedIndexChanged" />
-                                &nbsp;/&nbsp;
-                        <asp:Label ID="lblTotal" runat="server" Text="0" CssClass="mr-3"></asp:Label>
-                            </div>
-                            <div class="grid-wrapper" id="poAppovalmaint-scroll">
-                                <asp:GridView ID="grPOApprovalMaintenance" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" ShowHeaderWhenEmpty="True"
-                                    CssClass="table table-bordered table-modify" AllowPaging="True" DataSourceID="dsPOApprovalMaintenanceBrowse" OnRowDataBound="grPOApprovalMaintenance_RowDataBound">
-                                    <RowStyle CssClass="rowstyle" />
-                                    <Columns>
-                                        <asp:BoundField DataField="approval_code" SortExpression="approval_code" HeaderText="Approval Code" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center"></asp:BoundField>
 
-                                        <asp:BoundField DataField="description" SortExpression="description" HeaderText="Description" HeaderStyle-HorizontalAlign="Center">
-                                            <HeaderStyle HorizontalAlign="Center"></HeaderStyle>
-                                        </asp:BoundField>
-
-                                        <asp:TemplateField HeaderText="Status" SortExpression="status">
-                                            <EditItemTemplate>
-                                                <asp:TextBox ID="lblStatus" runat="server" Text='<%# Bind("status") %>'></asp:TextBox>
-                                            </EditItemTemplate>
-                                            <ItemTemplate>
-                                                <asp:Label ID="lblStatus" runat="server" Text='<%# Bind("status") %>'></asp:Label>
-                                            </ItemTemplate>
-                                            <HeaderStyle HorizontalAlign="Center" />
-                                            <ItemStyle CssClass="text-center" />
-                                        </asp:TemplateField>
-
-                                        <asp:TemplateField HeaderText="Option" HeaderStyle-Width="10px">
-                                            <ItemTemplate>
-                                                <asp:ImageButton ID="btEdit" runat="server" ImageUrl="~/Images/edit.png" Width="20px" Height="20px" OnClick="btEdit_Click" />
-                                            </ItemTemplate>
-                                            <ItemStyle CssClass="text-center" />
-                                        </asp:TemplateField>
-
-                                    </Columns>
-                                    <FooterStyle BackColor="#e9ecef" Font-Bold="True" />
-                                    <HeaderStyle BackColor="#e9ecef" HorizontalAlign="Center" />
-                                    <PagerStyle CssClass="pageStyle" HorizontalAlign="Center" />
-                                </asp:GridView>
-                            </div>
-                        </ContentTemplate>
-                    </asp:UpdatePanel>
-                </div>
-            </div>
-        </div>
-    </div>
-    <%----------------------------End Maint Browse-------------------------------%>
 
     <script>
 
