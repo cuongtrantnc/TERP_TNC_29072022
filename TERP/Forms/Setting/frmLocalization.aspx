@@ -5,69 +5,7 @@
 <asp:Content ContentPlaceHolderID="TERPContentPlaceHolder" runat="server">
     <%--    <link href="/terp/Style/TERP.css" rel="stylesheet" />--%>
     <link href="../../Style/Browse/BrowseStyle.css" rel="stylesheet" />
-    <style>
-        :root {
-            --fontsize: 0.85 rem;
-        }
-
-        .form-label {
-            font-weight: 500;
-        }
-
-        .col-button {
-            align-self: flex-end;
-        }
-
-        .grid-wrapper {
-            max-height: 510px;
-            overflow: auto;
-        }
-
-        .table.table-bordered > tbody {
-            position: relative;
-        }
-
-            .table.table-bordered > tbody > tr:first-child {
-                position: sticky;
-                top: -1px;
-                left: 0;
-            }
-
-        .rowstyle td {
-            padding: 3px;
-        }
-
-        .rowperpage-modify {
-            justify-content: flex-end;
-            margin-bottom: 10px;
-        }
-
-        .button-font-size {
-            font-size: var(--fontsize);
-        }
-
-        .col-button input {
-            margin-bottom: 2px;
-        }
-
-        .fieldSet {
-            /*37ad52*/
-            border: 1px solid #b9c3c5;
-            padding: 10px;
-            border-radius: 5px;
-        }
-
-        .fieldSet_legend {
-            width: auto;
-            border-bottom: none;
-            padding-right: 10px;
-            padding-left: 10px;
-            margin-bottom: 0;
-            color: #37ad52;
-            font-family: helvetica, arial, sans-serif;
-            font-size: var(--fontsize);
-        }
-    </style>
+    <link href="../../Style/PMS/frmLocalization.css" rel="stylesheet"/>
 
     <asp:UpdatePanel ID="UpdatePanelLocalization" runat="server">
         <ContentTemplate>
@@ -93,9 +31,8 @@
                                         <asp:Label ID="Label1" runat="server" Text="Prefix" CssClass="my-2 form-label form-text"></asp:Label>
                                         <asp:DropDownList ID="ddPrefix" runat="server" CssClass="form-control" DataSourceID="dsPrefix" DataTextField="prefix_name" DataValueField="prefix_name"></asp:DropDownList>
                                     </div>
-                                    <div class="col col-button mt-2">
-                                        <br />
-                                        <asp:Button ID="btQuery" runat="server" Text="Query" CssClass="btn bg-gradient-success rowButton-modal button-font-size" OnClick="btQuery_Click" />
+                                    <div class="col col-button">
+                                        <asp:Button ID="btQuery" runat="server" Text="Query" CssClass="btn bg-gradient-success query-button" OnClick="btQuery_Click" />
                                     </div>
                                 </div>
                             </fieldset>
