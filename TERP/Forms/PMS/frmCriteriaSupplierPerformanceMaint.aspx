@@ -5,23 +5,22 @@
     <link href="../../Style/PMS/frmCriteriaSupplierPerformanceMaint.css" rel="stylesheet" />
 
     <%-- Title Menu --%>
-    <div class="title-padding" style="width: 100%">
-        <asp:Label runat="server" ID="frmCriteriaSupplierPerformanceMaint_lblTitle" Text="Criteria Maintenance" CssClass="h4" Font-Bold="true"></asp:Label>
+    <div class="title-padding header-menu" style="width: 100%">
+        <asp:Label runat="server" ID="frmCriteriaSupplierPerformanceMaint_lblTitle" Text="Criteria Maintenance" CssClass="title_label"></asp:Label>
+    
+        <%-- Action : Create new && Import new --%>
+        <div class="action">
+            <span id="btnGoBack" class="action_button-hide">
+                <asp:Button runat="server" ID="frmCriteriaSupplierPerformanceMaint_btnGoBack" CssClass="btn btn-outline-success action_button" Text="Go Back" OnClick="frmCriteriaSupplierPerformanceMaint_btnGoBack_Click" /></span>
+            <span id="btnCreateNew">
+                <asp:Button runat="server" ID="frmCriteriaSupplierPerformanceMaint_btnCreateNew" CssClass="btn bg-gradient-success action_button" Text="Create Criteria" OnClick="frmCriteriaSupplierPerformanceMaint_btnCreateNew_Click" /></span>
+            <span id="btnUploadNew">
+                <asp:Button runat="server" ID="frmCriteriaSupplierPerformanceMaint_btnUploadNew" ClientIDMode="Static" CssClass="btn btn-outline-success action_button" Text="Upload Criteria" OnClick="frmCriteriaSupplierPerformanceMaint_btnUploadNew_Click" /></span>
+        </div>
     </div>
-
-    <%-- Action : Create new && Import new --%>
-    <div class="action">
-        <span id="btnGoBack" class="action_button-hide">
-            <asp:Button runat="server" ID="frmCriteriaSupplierPerformanceMaint_btnGoBack" CssClass="btn btn-outline-success action_button" Text="Go Back" OnClick="frmCriteriaSupplierPerformanceMaint_btnGoBack_Click" /></span>
-        <span id="btnCreateNew">
-            <asp:Button runat="server" ID="frmCriteriaSupplierPerformanceMaint_btnCreateNew" CssClass="btn bg-gradient-success action_button" Text="Create Criteria" OnClick="frmCriteriaSupplierPerformanceMaint_btnCreateNew_Click" /></span>
-        <span id="btnUploadNew">
-            <asp:Button runat="server" ID="frmCriteriaSupplierPerformanceMaint_btnUploadNew" ClientIDMode="Static" CssClass="btn btn-outline-success action_button" Text="Upload Criteria" OnClick="frmCriteriaSupplierPerformanceMaint_btnUploadNew_Click" /></span>
-    </div>
-
 
     <%-- Filter and View  --%>
-    <div class="row mt-4 " id="CriteriaMaintFilter">
+    <div class="row " id="CriteriaMaintFilter">
         <div class="col-md-12">
             <div class="card card-border card-boxshadow">
                 <div class="card-body">
@@ -34,19 +33,19 @@
                             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
                                 <div class="filter_validation">
                                     <div class="filter_item">
-                                        <asp:Label runat="server" ID="frmCriteriaSupplierPerformanceMaint_lblCode" Text="Code" CssClass="font-weight-bold text-right w-50 mr-3"></asp:Label>
+                                        <asp:Label runat="server" ID="frmCriteriaSupplierPerformanceMaint_lblCode" Text="Code" CssClass="filter_label filter_label--modify"></asp:Label>
                                         <asp:TextBox runat="server" ID="frmCriteriaSupplierPerformanceMaint_txtCode" CssClass="form-control"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="filter_item">
-                                    <asp:Label runat="server" ID="frmCriteriaSupplierPerformanceMaint_lblStatus" Text="Status" CssClass="font-weight-bold text-right w-50 mr-3"></asp:Label>
+                                    <asp:Label runat="server" ID="frmCriteriaSupplierPerformanceMaint_lblStatus" Text="Status" CssClass="filter_label filter_label--modify"></asp:Label>
                                     <asp:DropDownList ID="ddStatus" runat="server" CssClass="form-control">
                                         <asp:ListItem Selected="true" Text="Active"></asp:ListItem>
                                         <asp:ListItem Text="Inactive"></asp:ListItem>
                                     </asp:DropDownList>
                                 </div>
                                 <div class="filter_item">
-                                    <asp:Label runat="server" ID="frmCriteriaSupplierPerformanceMaint_lblCategory" Text="Category" CssClass="font-weight-bold text-right w-50 mr-3"></asp:Label>
+                                    <asp:Label runat="server" ID="frmCriteriaSupplierPerformanceMaint_lblCategory" Text="Category" CssClass="filter_label filter_label--modify"></asp:Label>
                                     <asp:DropDownList ID="ddCategory" runat="server" CssClass="form-control">
                                         <asp:ListItem Selected="true" Text="Initial Evaluate"></asp:ListItem>
                                         <asp:ListItem Text="Annual Evaluate"></asp:ListItem>
@@ -55,17 +54,12 @@
                             </div>
                             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
                                 <div class="filter_item">
-                                    <%-- <asp:Label runat="server" ID="frmCriteriaSupplierPerformanceMaint_lblContent" Text="Content" CssClass="font-weight-bold text-right w-50 mr-3"></asp:Label>
-                                        <asp:TextBox runat="server" ID="frmCriteriaSupplierPerformanceMaint_txtContent" CssClass="form-control"></asp:TextBox>--%>
-
-                                    <asp:Label runat="server" ID="frmCriteriaSupplierPerformanceMaint_lblContent" Text="Content" CssClass="font-weight-bold text-right w-50 mr-3"></asp:Label>
+                                    <asp:Label runat="server" ID="frmCriteriaSupplierPerformanceMaint_lblContent" Text="Content" CssClass="filter_label filter_label--modify"></asp:Label>
                                     <asp:DropDownList ID="ddContent" runat="server" CssClass="form-control select2" Style="width: 100%;">
                                     </asp:DropDownList>
                                 </div>
                                 <div class="filter_item">
-                                    <%-- <asp:Label runat="server" ID="frmCriteriaSupplierPerformanceMaint_lblContentDetail" Text="Content Detail" CssClass="font-weight-bold text-right w-50 mr-3"></asp:Label>
-                                        <asp:TextBox runat="server" ID="frmCriteriaSupplierPerformanceMaint_txtContentDetail" CssClass="form-control"></asp:TextBox>--%>
-                                    <asp:Label runat="server" ID="frmCriteriaSupplierPerformanceMaint_lblContentDetail" Text="Content Detail" CssClass="font-weight-bold text-right w-50 mr-3"></asp:Label>
+                                    <asp:Label runat="server" ID="frmCriteriaSupplierPerformanceMaint_lblContentDetail" Text="Content Detail" CssClass="filter_label filter_label--modify"></asp:Label>
                                     <asp:DropDownList ID="ddContentDetail" runat="server" CssClass="form-control select2" Style="width: 100%;">
                                     </asp:DropDownList>
                                 </div>
@@ -88,8 +82,8 @@
                     </div>
 
                     <%--Supplier GridView--%>
-                    <asp:GridView runat="server" ID="grCriteriaSupplierPerformanceMaint" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" ShowHeaderWhenEmpty="True" CssClass="table table-bordered mt-2 grview "
-                        AllowPaging="True" DataSourceID="dsPOApproval">
+                    <asp:GridView runat="server" ID="grCriteriaSupplierPerformanceMaint" AutoGenerateColumns="False" CellPadding="2" ForeColor="#333333" ShowHeaderWhenEmpty="True" CssClass="table table-bordered mt-2 grview "
+                        AllowPaging="True" DataSourceID="dsPOApproval" OnRowDataBound="grCriteriaSupplierPerformanceMaint_RowDataBound">
                         <RowStyle CssClass="rowstyle" />
                         <Columns>
                             <asp:BoundField DataField="" HeaderText="Code" HeaderStyle-CssClass="grview_header" ItemStyle-HorizontalAlign="Center" />
@@ -97,7 +91,21 @@
                             <asp:BoundField DataField="" HeaderText="Content Detail" />
                             <asp:BoundField DataField="" HeaderText="Content" />
                             <asp:BoundField DataField="" HeaderText="Category" />
-                            <asp:BoundField DataField="" HeaderText="Status" ItemStyle-HorizontalAlign="Center" ItemStyle-CssClass="grview_header" />
+
+                            <asp:TemplateField HeaderText="Status" SortExpression="enable">
+                                <EditItemTemplate>
+                                    <asp:Label ID="lblStatus" runat="server" Text='<%# Bind("status") %>'></asp:Label>
+                                </EditItemTemplate>
+                                <ItemTemplate>
+                                    <asp:LinkButton ID="btnChangeStatus" runat="server" CssClass="grview_status" Text='<%# Bind("status") %>' ToolTip="Click to change Status" OnClick="btnChangeStatus_Click"></asp:LinkButton>
+																																																																																																									  
+										  
+                                </ItemTemplate>
+                                <ItemStyle CssClass="text-center grview_header" />
+                                <HeaderStyle HorizontalAlign="Center" />
+                            </asp:TemplateField>
+
+
                             <asp:TemplateField>
                                 <HeaderTemplate>
                                     <asp:Label runat="server" Text="Edit" />
@@ -107,19 +115,8 @@
                                         <asp:ImageButton runat="server" ID="btnEditCriteriaMaint" ImageUrl="~/Images/edit.png" ToolTip="Edit" CssClass="itemTemplate-icon" OnClick="btnEditCriteriaMaint_Click" />
                                     </div>
                                 </ItemTemplate>
-                                <ItemStyle CssClass="itemStyle" />
+                                <ItemStyle CssClass="itemStyle grview_header" />
                                 <HeaderStyle HorizontalAlign="Center" />
-                            </asp:TemplateField>
-
-                            <asp:TemplateField>
-                                <HeaderTemplate>
-                                    <asp:Label runat="server" Text="Change Status" />
-                                </HeaderTemplate>
-                                <ItemTemplate>
-                                    <asp:CheckBox runat="server" />
-                                </ItemTemplate>
-                                <ItemStyle CssClass="text-center" />
-                                <HeaderStyle CssClass="grview_header" />
                             </asp:TemplateField>
 
                             <asp:TemplateField>
@@ -128,7 +125,7 @@
                                 </HeaderTemplate>
                                 <ItemTemplate>
                                     <div class="itemTemplate">
-                                        <asp:ImageButton runat="server" ID="btnDeleteCriteriaMaint" ImageUrl="~/Images/trash.png" ToolTip="Delete" CssClass="itemTemplate-icon" />
+                                        <asp:ImageButton runat="server" ID="btnDeleteCriteriaMaint" ImageUrl="~/Images/trash.png" ToolTip="Delete" CssClass="itemTemplate-icon" OnClick="btnDeleteCriteriaMaint_Click"/>
                                     </div>
                                 </ItemTemplate>
                                 <ItemStyle CssClass="itemStyle" />
@@ -146,7 +143,7 @@
 
 
     <%-- Form Create Supplier and Edit Supplier --%>
-    <div class="row mt-4 supplier_form" id="CriteriaMaintForm">
+    <div class="row supplier_form" id="CriteriaMaintForm">
         <div class="col-md-12">
             <div class="card card-border card-boxshadow">
                 <div class="card-body">
@@ -160,14 +157,14 @@
                             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                                 <div class="filter_validation">
                                     <div class="filter_item">
-                                        <asp:Label runat="server" ID="frmCriteriaSupplierPerformanceMaint_formlblCode" Text="Code" CssClass="font-weight-bold text-right w-50 mr-3"></asp:Label>
+                                        <asp:Label runat="server" ID="frmCriteriaSupplierPerformanceMaint_formlblCode" Text="Code" CssClass="filter_label"></asp:Label><span class="span_require">*</span>
                                         <asp:TextBox runat="server" ID="frmCriteriaSupplierPerformanceMaint_formtxtCode" CssClass="form-control"></asp:TextBox>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                                 <div class="filter_item">
-                                    <asp:Label runat="server" ID="frmCriteriaSupplierPerformanceMaint_formlblStatus" Text="Status" CssClass="font-weight-bold text-right w-50 mr-3"></asp:Label>
+                                    <asp:Label runat="server" ID="frmCriteriaSupplierPerformanceMaint_formlblStatus" Text="Status" CssClass="filter_label filter_frmlabel--modify"></asp:Label>
                                     <asp:DropDownList ID="ddFormStatus" runat="server" CssClass="form-control">
                                         <asp:ListItem Selected="true" Text="Active"></asp:ListItem>
                                         <asp:ListItem Text="Inactive"></asp:ListItem>
@@ -180,13 +177,13 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                                 <div class="filter_item">
-                                    <asp:Label runat="server" ID="frmCriteriaSupplierPerformanceMaint_formlblName" Text="Name" CssClass="font-weight-bold text-right w-50 mr-3"></asp:Label>
+                                    <asp:Label runat="server" ID="frmCriteriaSupplierPerformanceMaint_formlblName" Text="Name" CssClass="filter_label filter_frmlabel--modify"></asp:Label>
                                     <asp:TextBox runat="server" ID="frmCriteriaSupplierPerformanceMaint_formtxtName" CssClass="form-control"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                                 <div class="filter_item">
-                                    <asp:Label runat="server" ID="frmCriteriaSupplierPerformanceMaint_formlblContent" Text="Content" CssClass="font-weight-bold text-right w-50 mr-3"></asp:Label>
+                                    <asp:Label runat="server" ID="frmCriteriaSupplierPerformanceMaint_formlblContent" Text="Content" CssClass="filter_label filter_labelselect2"></asp:Label>
                                     <asp:DropDownList runat="server" ID="ddFormContent" CssClass="form-control select2" Style="width: 100%;">
                                     </asp:DropDownList>
                                 </div>
@@ -197,7 +194,7 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                                 <div class="filter_item">
-                                    <asp:Label runat="server" ID="frmCriteriaSupplierPerformanceMaint_formlblCategory" Text="Category" CssClass="font-weight-bold text-right w-50 mr-3"></asp:Label>
+                                    <asp:Label runat="server" ID="frmCriteriaSupplierPerformanceMaint_formlblCategory" Text="Category" CssClass="filter_label filter_frmlabel--modify"></asp:Label>
                                     <asp:DropDownList runat="server" ID="ddFormCategory" CssClass="form-control">
                                         <asp:ListItem Selected="true" Text="Initial Evaluate"></asp:ListItem>
                                         <asp:ListItem Text="Annual Evaluate"></asp:ListItem>
@@ -206,7 +203,7 @@
                             </div>
                             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                                 <div class="filter_item">
-                                    <asp:Label runat="server" ID="frmCriteriaSupplierPerformanceMaint_formlblContentDetail" Text="Content Detail" CssClass="font-weight-bold text-right w-50 mr-3"></asp:Label>
+                                    <asp:Label runat="server" ID="frmCriteriaSupplierPerformanceMaint_formlblContentDetail" Text="Content Detail" CssClass="filter_label filter_labelselect2"></asp:Label>
                                     <asp:DropDownList runat="server" ID="ddFormContentDetail" CssClass="form-control select2" Style="width: 100%;">
                                     </asp:DropDownList>
                                 </div>
@@ -217,14 +214,14 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                                 <div class="filter_item">
-                                    <asp:Label runat="server" ID="frmCriteriaSupplierPerformanceMaint_formlblPoints" Text="Points" CssClass="font-weight-bold text-right w-50 mr-3"></asp:Label>
+                                    <asp:Label runat="server" ID="frmCriteriaSupplierPerformanceMaint_formlblPoints" Text="Points" CssClass="filter_label filter_frmlabel--modify"></asp:Label>
                                     <asp:TextBox runat="server" ID="frmCriteriaSupplierPerformanceMaint_formtxtPoints" CssClass="form-control" TextMode="Number" step="0.5" max="5" min="1"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                                 <div class="filter_validation">
                                     <div class="filter_item">
-                                        <asp:Label runat="server" ID="frmCriteriaSupplierPerformanceMaint_formlblOrder" Text="Order" CssClass="font-weight-bold text-right w-50 mr-3"></asp:Label>
+                                        <asp:Label runat="server" ID="frmCriteriaSupplierPerformanceMaint_formlblOrder" Text="Order" CssClass="filter_label filter_frmlabel--modify"></asp:Label>
                                         <asp:TextBox runat="server" ID="frmCriteriaSupplierPerformanceMaint_formtxtOrder" CssClass="form-control" TextMode="Number" step="1" min="1"></asp:TextBox>
                                     </div>
                                 </div>
@@ -235,7 +232,7 @@
                     <%-- Action : Save && Canncel --%>
                     <div class="text-right mt-4">
                         <span id="btnsave">
-                            <asp:Button ID="frmCriteriaSupplierPerformanceMaint_btnSave" runat="server" Text="Save" CssClass="btn bg-gradient-success action_button" /></span>
+                            <asp:Button ID="frmCriteriaSupplierPerformanceMaint_btnSave" runat="server" Text="Save" CssClass="btn bg-gradient-success action_button action_button--modify" /></span>
                         <span id="btncancel">
                             <asp:Button ID="frmCriteriaSupplierPerformanceMaint_btnCancel" runat="server" Text="Cancel" CssClass="btn btn-outline-dark action_button" />
                         </span>
@@ -248,7 +245,7 @@
 
 
     <%-- Import/Upload Supplier --%>
-    <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 justify-content-center mt-4 supplier_import" id="CriteriaMaintImport">
+    <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 justify-content-center supplier_import" id="CriteriaMaintImport">
         <div class="col">
             <div id="frmDropFile" class="box">
                 <div class="text-center">
@@ -264,7 +261,53 @@
                 <asp:Button runat="server" ID="frmCriteriaSupplierPerformanceMaint_link" class="note_link" Text="Template here" />
             </div>
             <div class="mt-3 text-md-right">
-                <asp:Button ID="frmCriteriaSupplierPerformanceMaint_btnImport" runat="server" CssClass="btn bg-gradient-success rowButton-modal" />
+                <asp:Button ID="frmCriteriaSupplierPerformanceMaint_btnImport" runat="server" CssClass="btn bg-gradient-success rowButton-modal" text="Upload"/>
+            </div>
+        </div>
+    </div>
+
+    <%-- Modal popup confirm update status --%>
+    <div class="modal fade" id="CriteriaModalUpdate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-md">
+            <div class="modal-content card-border">
+                <div class="modal-detail">
+                    <div class="modal-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="modal-desc">
+                        <asp:Label runat="server" ID="lblUpdateTitle" Text="Change Status" CssClass="modal-text1"></asp:Label>
+                        <div class="mt-1">
+                            <asp:Label runat="server" ID="lblUpdateDesc" Text="Are you sure you want to change the Status of item ?" CssClass="modal-text2" ></asp:Label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-action">
+                    <asp:Button runat="server" ID="btnUpdCanncel" CssClass="btn btn-outline-dark mr-2" Text="Canncel"/>
+                    <asp:Button runat="server" ID="btnUpdateStatus" CssClass="btn bg-gradient-success" Text="Yes"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <%-- Modal popup confirm delete record in browse --%>
+    <div class="modal fade" id="CriteriaModalDelete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-md">
+            <div class="modal-content card-border">
+                <div class="modal-detail">
+                    <div class="modal-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="modal-desc">
+                        <asp:Label runat="server" ID="lblDeleteTitle" Text="Delete Evaluate" CssClass="modal-text1"></asp:Label>
+                        <div class="mt-1">
+                            <asp:Label runat="server" ID="lblDeleteDesc" Text="Are you sure you want to delete Criteria  ?" CssClass="modal-text2" ></asp:Label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-action">
+                    <asp:Button runat="server" ID="btnDltCanncel" CssClass="btn btn-outline-dark mr-2" Text="Canncel"/>
+                    <asp:Button runat="server" ID="btnDeleteStatus" CssClass="btn bg-gradient-success" Text="Yes"/>
+                </div>
             </div>
         </div>
     </div>

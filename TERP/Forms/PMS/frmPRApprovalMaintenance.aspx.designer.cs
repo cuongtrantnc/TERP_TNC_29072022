@@ -103,6 +103,42 @@ namespace TERP.Forms.PMS {
         protected global::System.Web.UI.WebControls.Button ApprovalMaint_btnClear;
         
         /// <summary>
+        /// ApprovalMaint_lblRecordPerPage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ApprovalMaint_lblRecordPerPage;
+        
+        /// <summary>
+        /// ddRecordPerPage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddRecordPerPage;
+        
+        /// <summary>
+        /// lblTotal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTotal;
+        
+        /// <summary>
+        /// grApprovalMaint control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView grApprovalMaint;
+        
+        /// <summary>
         /// ApprovalMaint_lblModalTitle control.
         /// </summary>
         /// <remarks>
@@ -218,51 +254,6 @@ namespace TERP.Forms.PMS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button ApprovalMaint_btSave;
-        
-        /// <summary>
-        /// upPRApprovalMaintBrowse control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.UpdatePanel upPRApprovalMaintBrowse;
-        
-        /// <summary>
-        /// ApprovalMaint_lblRecordPerPage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ApprovalMaint_lblRecordPerPage;
-        
-        /// <summary>
-        /// ddRecordPerPage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddRecordPerPage;
-        
-        /// <summary>
-        /// lblTotal control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTotal;
-        
-        /// <summary>
-        /// grApprovalMaint control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grApprovalMaint;
         
         /// <summary>
         /// dsRowPerPage control.

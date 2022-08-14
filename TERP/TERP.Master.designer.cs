@@ -40,6 +40,24 @@ namespace TERP {
         protected global::System.Web.UI.HtmlControls.HtmlForm quickForm;
         
         /// <summary>
+        /// frmMaster_lblWorkSpace control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label frmMaster_lblWorkSpace;
+        
+        /// <summary>
+        /// ddWorkSpace control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddWorkSpace;
+        
+        /// <summary>
         /// lbMailNotic control.
         /// </summary>
         /// <remarks>

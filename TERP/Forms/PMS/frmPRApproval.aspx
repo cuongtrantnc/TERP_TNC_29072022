@@ -17,10 +17,10 @@
             <div class="row" id="divCondition" runat="server">
                 <div class="col-md-12">
                     <div class="card card-border card-boxshadow">
-                        <div class="card-body">
+                        <div class="card-body" style="overflow: auto;">
                             <fieldset class="fieldSet">
                                 <legend class="fieldSet_legend">
-                                    <asp:Label runat="server" ID="PRApproval_fieldSetFilter" Text="Filter"></asp:Label>
+                                    <asp:Label runat="server" ID="PRApproval_fieldSetFilter" Text="Filter Condition"></asp:Label>
                                 </legend>
                                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                                     <div class="col">
@@ -63,59 +63,57 @@
                                 </div>
                             </fieldset>
                             <%--PRApproval GridView--%>
-                            <div class="card card-border card-boxshadow mt-3">
-                                <div class="card-body" style="overflow: auto;">
-                                    <div class="d-flex align-items-center rowperpage-modify">
-                                        <asp:Label ID="PRApproval_lblRecordPage" runat="server" Text="Record per Page" CssClass="mr-3"></asp:Label>
-                                        <asp:DropDownList ID="ddRecordPerPage" runat="server" CssClass="" DataSourceID="dsRowPerPage" DataTextField="value" DataValueField="value" AutoPostBack="True" OnSelectedIndexChanged="ddRecordPerPage_SelectedIndexChanged" />
-                                        &nbsp;/&nbsp;
+                            
+                            <div class="d-flex align-items-center rowperpage-modify">
+                                <asp:Label ID="PRApproval_lblRecordPage" runat="server" Text="Record per Page" CssClass="mr-3"></asp:Label>
+                                <asp:DropDownList ID="ddRecordPerPage" runat="server" CssClass="" DataSourceID="dsRowPerPage" DataTextField="value" DataValueField="value" AutoPostBack="True" OnSelectedIndexChanged="ddRecordPerPage_SelectedIndexChanged" />
+                                &nbsp;/&nbsp;
                                 <asp:Label ID="lblTotal" runat="server" Text="0" CssClass="mr-3"></asp:Label>
-                                    </div>
-                                    <div class="grid-wrapper-maint-browse" id="prApproval-scroll">
-                                        <asp:GridView ID="grPRApproval" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" ShowHeaderWhenEmpty="True" CssClass="table table-bordered table-maint-browse-modify"
-                                            AllowPaging="True" DataSourceID="dsPRApproval" OnRowDataBound="grPRApproval_RowDataBound">
-                                            <RowStyle CssClass="rowstyle" />
-                                            <Columns>
-                                                <asp:BoundField DataField="pr_no" HeaderText="PR No." SortExpression="pr_no" />
-                                                <asp:BoundField DataField="amount" HeaderText="Amount" SortExpression="amount" DataFormatString="{0:#,###.##}" ItemStyle-HorizontalAlign="Right" />
-                                                <asp:BoundField DataField="create_date" HeaderText="Create Date" ReadOnly="True" SortExpression="create_date" DataFormatString="{0:MM/dd/yyyy}" ItemStyle-HorizontalAlign="Center" />
-                                                <asp:BoundField DataField="due_date" HeaderText="Due Date" SortExpression="due_date" DataFormatString="{0:MM/dd/yyyy}" ItemStyle-HorizontalAlign="Center" />
-                                                <asp:BoundField DataField="next_approver" HeaderText="Next Approver" SortExpression="next_approver" />
-                                                <asp:BoundField DataField="status" HeaderText="Status" SortExpression="status" ItemStyle-HorizontalAlign="Center" />
-                                                <asp:TemplateField>
-                                                    <HeaderTemplate>
-                                                        <asp:Label runat="server" Text="Action" />
-                                                    </HeaderTemplate>
-                                                    <ItemTemplate>
-                                                        <div class="itemTemplate">
-                                                            <asp:ImageButton runat="server" ID="btDetailItemView" ImageUrl="~/Images/view.png" ToolTip="View Detail" CssClass="itemTemplate-icon" OnClick="btDetailItemView_Click" />
-                                                        </div>
-                                                    </ItemTemplate>
-                                                    <ItemStyle CssClass="itemStyle" />
-                                                    <HeaderStyle HorizontalAlign="Center" />
-                                                </asp:TemplateField>
-
-                                                <asp:TemplateField>
-                                                    <HeaderTemplate>
-                                                        <asp:Label runat="server" Text="History" />
-                                                    </HeaderTemplate>
-                                                    <ItemTemplate>
-                                                        <div class="itemTemplate">
-                                                            <asp:ImageButton runat="server" ID="btHistoryLogged" ImageUrl="~/Images/info.png" ToolTip="Loged" CssClass="itemTemplate-icon" OnClick="btHistoryLogged_Click" />
-                                                        </div>
-                                                    </ItemTemplate>
-                                                </asp:TemplateField>
-                                                <asp:BoundField DataField="order_" HeaderText="order" SortExpression="order_" />
-                                            </Columns>
-                                            <FooterStyle BackColor="#e9ecef" Font-Bold="True" />
-                                            <HeaderStyle BackColor="#e9ecef" HorizontalAlign="Center" />
-                                            <PagerStyle CssClass="pageStyle" HorizontalAlign="Center" />
-
-                                        </asp:GridView>
-                                    </div>
-
-                                </div>
                             </div>
+
+                            <div class="grid-wrapper-maint-browse" id="prApproval-scroll">
+                                <asp:GridView ID="grPRApproval" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" ShowHeaderWhenEmpty="True" CssClass="table table-bordered table-maint-browse-modify"
+                                    AllowPaging="True" DataSourceID="dsPRApproval" OnRowDataBound="grPRApproval_RowDataBound">
+                                    <RowStyle CssClass="rowstyle" />
+                                    <Columns>
+                                        <asp:BoundField DataField="pr_no" HeaderText="PR No." SortExpression="pr_no" />
+                                        <asp:BoundField DataField="amount" HeaderText="Amount" SortExpression="amount" DataFormatString="{0:#,###.##}" ItemStyle-HorizontalAlign="Right" />
+                                        <asp:BoundField DataField="create_date" HeaderText="Create Date" ReadOnly="True" SortExpression="create_date" DataFormatString="{0:MM/dd/yyyy}" ItemStyle-HorizontalAlign="Center" />
+                                        <asp:BoundField DataField="due_date" HeaderText="Due Date" SortExpression="due_date" DataFormatString="{0:MM/dd/yyyy}" ItemStyle-HorizontalAlign="Center" />
+                                        <asp:BoundField DataField="next_approver" HeaderText="Next Approver" SortExpression="next_approver" />
+                                        <asp:BoundField DataField="status" HeaderText="Status" SortExpression="status" ItemStyle-HorizontalAlign="Center" />
+                                        <asp:TemplateField>
+                                            <HeaderTemplate>
+                                                <asp:Label runat="server" Text="Action" />
+                                            </HeaderTemplate>
+                                            <ItemTemplate>
+                                                <div class="itemTemplate">
+                                                    <asp:ImageButton runat="server" ID="btDetailItemView" ImageUrl="~/Images/view.png" ToolTip="View Detail" CssClass="itemTemplate-icon" OnClick="btDetailItemView_Click" />
+                                                </div>
+                                            </ItemTemplate>
+                                            <ItemStyle CssClass="itemStyle" />
+                                            <HeaderStyle HorizontalAlign="Center" />
+                                        </asp:TemplateField>
+
+                                        <asp:TemplateField>
+                                            <HeaderTemplate>
+                                                <asp:Label runat="server" Text="History" />
+                                            </HeaderTemplate>
+                                            <ItemTemplate>
+                                                <div class="itemTemplate">
+                                                    <asp:ImageButton runat="server" ID="btHistoryLogged" ImageUrl="~/Images/info.png" ToolTip="Loged" CssClass="itemTemplate-icon" OnClick="btHistoryLogged_Click" />
+                                                </div>
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+                                        <asp:BoundField DataField="order_" HeaderText="order" SortExpression="order_" />
+                                    </Columns>
+                                    <FooterStyle BackColor="#e9ecef" Font-Bold="True" />
+                                    <HeaderStyle BackColor="#e9ecef" HorizontalAlign="Center" />
+                                    <PagerStyle CssClass="pageStyle" HorizontalAlign="Center" />
+
+                                </asp:GridView>
+                            </div>
+
                             <%--End PRApproval GridView--%>
                         </div>
                     </div>

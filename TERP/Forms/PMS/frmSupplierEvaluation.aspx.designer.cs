@@ -67,22 +67,31 @@ namespace TERP.Forms.PMS {
         protected global::System.Web.UI.WebControls.TextBox frmSupplierEvaluation_txtCode;
         
         /// <summary>
-        /// frmSupplierEvaluation_lblSupplier control.
+        /// frmSupplierEvaluation_lblEffDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label frmSupplierEvaluation_lblSupplier;
+        protected global::System.Web.UI.WebControls.Label frmSupplierEvaluation_lblEffDate;
         
         /// <summary>
-        /// ddSupplier control.
+        /// frmSupplierEvaluation_txtEffDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddSupplier;
+        protected global::System.Web.UI.WebControls.TextBox frmSupplierEvaluation_txtEffDate;
+        
+        /// <summary>
+        /// frmSupplierEvaluation_txtEffDate_CalendarExtender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.CalendarExtender frmSupplierEvaluation_txtEffDate_CalendarExtender;
         
         /// <summary>
         /// frmSupplierEvaluation_lblCategory control.
@@ -121,31 +130,22 @@ namespace TERP.Forms.PMS {
         protected global::System.Web.UI.WebControls.DropDownList ddItem;
         
         /// <summary>
-        /// frmSupplierEvaluation_lblEffDate control.
+        /// frmSupplierEvaluation_lblSupplier control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label frmSupplierEvaluation_lblEffDate;
+        protected global::System.Web.UI.WebControls.Label frmSupplierEvaluation_lblSupplier;
         
         /// <summary>
-        /// frmSupplierEvaluation_txtEffDate control.
+        /// ddSupplier control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox frmSupplierEvaluation_txtEffDate;
-        
-        /// <summary>
-        /// frmSupplierEvaluation_txtEffDate_CalendarExtender control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::AjaxControlToolkit.CalendarExtender frmSupplierEvaluation_txtEffDate_CalendarExtender;
+        protected global::System.Web.UI.WebControls.DropDownList ddSupplier;
         
         /// <summary>
         /// frmSupplierEvaluation_filterBtnSearch control.
@@ -317,15 +317,6 @@ namespace TERP.Forms.PMS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox frmSupplierEvaluation_formtxtComment;
-        
-        /// <summary>
-        /// fieldSet_ViewSupplierEvaluation control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label fieldSet_ViewSupplierEvaluation;
         
         /// <summary>
         /// frmSupplierEvaluation_btnAddSupplierEvaluation control.

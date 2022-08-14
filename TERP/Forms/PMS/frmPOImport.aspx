@@ -14,6 +14,7 @@
                 <div id="divFilter" class="box">
                     <div class="text-center">
                         <asp:Label runat="server" ID="POImport_lblDesc" class="box_description">Drag and Drop to upload data file (*.csv, *.xlsx) or import file from your computer</asp:Label>
+                        <span class="box_icon"><i class="fa fa-cloud-upload-alt"></i></span>
                         <asp:FileUpload ID="fileUpload" runat="server" CssClass="box_import"/>
                     </div>
                 </div>
@@ -26,7 +27,7 @@
                     </div>
                 <div class="mt-3 text-md-right">
                     <asp:Button ID="POImport_btQuery" runat="server" Text="Upload" CssClass="btn bg-gradient-success rowButton-modal" OnClick="POImport_btQuery_Click"/>                    
-                    <asp:LinkButton runat="server" ID="POImport_btLink" CssClass="btn bg-gradient-success rowButton-modal" Text="Upload" HtmlEncode="False" OnClick="POImport_btQuery_Click"><i class="fa fa-upload mr-2"></i></asp:LinkButton>  
+                    <%--<asp:LinkButton runat="server" ID="POImport_btLink" CssClass="btn bg-gradient-success rowButton-modal" Text="Upload" HtmlEncode="False" OnClick="POImport_btQuery_Click"><i class="fa fa-upload mr-2"></i></asp:LinkButton>  --%>
                 </div>
             </div>
         </div>

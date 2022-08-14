@@ -1,7 +1,23 @@
 ﻿
 /* ĐÂY LÀ FILE CSS CHO BROWSE */
+
+:root {
+    --table-bg: #fbfbfc;
+    --table-header-color: rgba(44, 56, 74, 0.95);
+    --table-row-hover: #f8f9fa;
+}
+
+.table_header {
+    background-color: var(--table-bg) !important;
+    color: var(--table-header-color);
+}
+
 .rowstyle td {
     vertical-align:middle;
+}
+
+.rowstyle:hover , rowstyle:focus {
+    background: var(--table-row-hover);
 }
 
 .rowstyle:hover {
@@ -153,6 +169,7 @@
 
 .rowButton-modal {
     width: 120px;
+    font-size:0.85rem;
 }
 
 .rowButton-modal:first-child {
