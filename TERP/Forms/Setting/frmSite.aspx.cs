@@ -160,6 +160,7 @@ namespace TERP.Forms.Setting
 
         protected void Site_btSiteDel_Click(object sender, EventArgs e)
         {
+
             string site_name = txtSiteName.Text.Trim();
             if (site_name == "")
             {
@@ -167,16 +168,29 @@ namespace TERP.Forms.Setting
             }
             else
             {
-                dsTemp.DeleteCommand = "DELETE FROM TERP_site WHERE name='" + site_name + "'";
-                dsTemp.Delete();
+                string query = "select po_no from PMS_master_po where site_name = '" + site_name + "' union select pr_no from PMS_master_pr where site_name = '" + site_name + "' ";
+                DataRow dr = DbHelper.getDataRow(query, dsTemp.ConnectionString);
+                if (dr != null)
+                {
 
-                (new Mess(this)).ShowMessage("Site has been deleted successfully", Mess.TYPE_SUCCESS);
+                    txtSiteName.Text = "";
+                    txtDescription.Text = "";
+                    (new Mess(this)).ShowMessage("Site has been used and cannot be deleted", Mess.TYPE_ERROR);
+                }
+                else
+                {
+                    dsTemp.DeleteCommand = "DELETE FROM TERP_site WHERE name='" + site_name + "'";
+                    dsTemp.Delete();
 
-                // Reset Form 
-                grSite.DataBind();
-                lblTotal.Text = DbHelper.getRowCount(dsSite);
-                txtSiteName.Text = "";
-                txtDescription.Text = "";
+                    (new Mess(this)).ShowMessage("Site has been deleted successfully", Mess.TYPE_SUCCESS);
+
+                    // Reset Form 
+                    grSite.DataBind();
+                    lblTotal.Text = DbHelper.getRowCount(dsSite);
+                    txtSiteName.Text = "";
+                    txtDescription.Text = "";
+                }
+
             }
         }
 
@@ -184,10 +198,22 @@ namespace TERP.Forms.Setting
         {
             if (grSite.SelectedIndex >= 0)
             {
+                
                 txtSiteName.Text = grSite.SelectedRow.Cells[1].Text.Trim();
                 txtSiteNameBackUp.Text = grSite.SelectedRow.Cells[1].Text.Trim();
                 txtDescription.Text = grSite.SelectedRow.Cells[2].Text.Replace("&nbsp;", "").Trim();
                 ddAccessible.SelectedValue = grSite.SelectedRow.Cells[3].Text.Trim();
+
+                //when selected index change on gridview => dropdown will change status
+                Label lblstatus = ((Label)grSite.SelectedRow.Cells[2].FindControl("lblStatus"));
+                for (int i = 0; i < ddAccessible.Items.Count; i++)
+                {
+                    if (ddAccessible.Items[i].Text.Trim().Equals(lblstatus.Text))
+                    {
+                        ddAccessible.SelectedIndex = i;
+                        break;
+                    }
+                }
             }
         }
 
@@ -321,6 +347,17 @@ namespace TERP.Forms.Setting
                 if (dr!=null)
                 {
                     ddDeptSite.SelectedValue = dr[0].ToString().Trim();
+                }
+
+                //when selected index change on gridview => dropdown will change status
+                Label lblstatus = ((Label)grDepartment.SelectedRow.Cells[3].FindControl("lblStatus"));
+                for (int i = 0; i < ddDeptStatus.Items.Count; i++)
+                {
+                    if (ddDeptStatus.Items[i].Text.Trim().Equals(lblstatus.Text))
+                    {
+                        ddDeptStatus.SelectedIndex = i;
+                        break;
+                    }
                 }
             }
         }

@@ -99,7 +99,7 @@
                     <div class="wrap d-md-flex">
                         <div class="text-wrap p-4 p-lg-5 text-center d-flex align-items-center order-md-last">
                             <div class="text w-100">
-                                <img src="Images/tERP_logo.png" class="img_logo" />
+                                <img src="Images/logo-ThinkNext.png" class="img_logo" />
                                 <%--<h2>Welcome to login</h2>--%>
                                 <p>
                                     <asp:Label runat="server" CssClass="label" ID="lblMessage" for="name" Text="Sign in with QR Code"></asp:Label>

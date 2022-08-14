@@ -7,12 +7,8 @@
     <link href="../../Style/PMS/frmPRMaintenance.css" rel="stylesheet" />
 
     <%--  ----------------PR MAINT---------------%>
-    <div class="top">
-        <div style="width: 100%" class="title-padding">
-            <asp:Label ID="PRMaintenance_lblModuleTitle" runat="server" Text="PR Maintenance" Font-Bold="True" CssClass="h4"></asp:Label>
-            <%--title-color--%>
-        </div>
-
+    <div class="top title-padding" style="width: 100%">
+        <asp:Label ID="PRMaintenance_lblModuleTitle" runat="server" Text="PR Maintenance" Font-Bold="True" CssClass="h4"></asp:Label>
         <div class="create">
             <asp:Button ID="PRMaintenance_btCreate" runat="server" Text="Create PR" CssClass="btn bg-gradient-success create-button btn-font-size" OnClick="btCreate_Click" />
         </div>
@@ -96,7 +92,7 @@
                                         </span>
                                     </div>
                                     <asp:TextBox ID="txtNeedDate" runat="server" CssClass="form-control" autocomplete="off" ReadOnly="false" Text='<%# Bind("need_date") %>' AutoPostBack="True" TextMode="DateTime" OnTextChanged="txtNeedDate_TextChanged"></asp:TextBox>
-                                    <ajaxToolkit:CalendarExtender ID="txtNeedDate_CalendarExtender" runat="server" BehaviorID="txtNeedDate_CalendarExtender" TargetControlID="txtNeedDate"></ajaxToolkit:CalendarExtender>
+                                    <ajaxToolkit:CalendarExtender ID="txtNeedDate_CalendarExtender" runat="server"  TargetControlID="txtNeedDate"></ajaxToolkit:CalendarExtender>
                                 </div>
                             </ItemTemplate>
                             <ItemStyle CssClass="text-center" />
@@ -110,26 +106,26 @@
                                         </span>
                                     </div>
                                     <asp:TextBox ID="txtDueDate" runat="server" CssClass="form-control" autocomplete="off" ReadOnly="false" Text='<%# Bind("due_date") %>' TextMode="DateTime" AutoPostBack="True" OnTextChanged="txtDueDate_TextChanged"></asp:TextBox>
-                                    <ajaxToolkit:CalendarExtender ID="txtDueDate_CalendarExtender" runat="server" BehaviorID="txtDueDate_CalendarExtender" TargetControlID="txtDueDate"></ajaxToolkit:CalendarExtender>
+                                    <ajaxToolkit:CalendarExtender ID="txtDueDate_CalendarExtender" runat="server" TargetControlID="txtDueDate"></ajaxToolkit:CalendarExtender>
                                 </div>
                             </ItemTemplate>
                             <ItemStyle CssClass="text-center" />
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Qty Required">
                             <ItemTemplate>
-                                <asp:TextBox ID="txtRequiredQty" runat="server" CssClass="form-control mt-2" MaxLength="20" AutoPostBack="True" Text='<%# Bind("required_qty") %>' OnTextChanged="txtRequiredQty_TextChanged"></asp:TextBox>
+                                <asp:TextBox ID="txtRequiredQty" runat="server" CssClass="form-control mt-2" MaxLength="20" AutoPostBack="True" Text='<%# Bind("required_qty","{0:#,##0.00}") %>' OnTextChanged="txtRequiredQty_TextChanged"></asp:TextBox>
                             </ItemTemplate>
                             <ItemStyle CssClass="text-center" />
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Qty Order" Visible="false">
                             <ItemTemplate>
-                                <asp:TextBox ID="txtOrder" runat="server" CssClass="form-control mt-2" MaxLength="20" AutoPostBack="True" Text='<%# Bind("ordered_qty") %>' OnTextChanged="txtOrder_TextChanged"></asp:TextBox>
+                                <asp:TextBox ID="txtOrder" runat="server" CssClass="form-control mt-2" MaxLength="20" AutoPostBack="True" Text='<%# Bind("ordered_qty", "{0:#,##0.00}") %>' OnTextChanged="txtOrder_TextChanged"></asp:TextBox>
                             </ItemTemplate>
                             <ItemStyle CssClass="text-center" />
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Unit Cost">
                             <ItemTemplate>
-                                <asp:TextBox ID="txtUnitCost" runat="server" CssClass="form-control mt-2" MaxLength="20" AutoPostBack="True" Text='<%# Bind("unit_cost") %>' OnTextChanged="txtUnitCost_TextChanged"></asp:TextBox>
+                                <asp:TextBox ID="txtUnitCost" runat="server" CssClass="form-control mt-2" MaxLength="20" AutoPostBack="True" Text='<%# Bind("unit_cost", "{0:#,##0.00}") %>' OnTextChanged="txtUnitCost_TextChanged"></asp:TextBox>
                             </ItemTemplate>
                             <ItemStyle CssClass="text-center" />
                         </asp:TemplateField>
@@ -183,10 +179,10 @@
     <div id="divMain" runat="server">
         <%-- ----------------Filter------------------%>
 
-        <div class="create-form-group card-boxshadow">
+        <div class="create-form-group card-boxshadow" style="overflow: auto;">
             <fieldset class="fieldSet">
                 <legend class="fieldSet_legend">
-                    <asp:Label runat="server" ID="PRMaintenance_fieldSetFilter" Text="Filter"></asp:Label>
+                    <asp:Label runat="server" ID="PRMaintenance_fieldSetFilter" Text="Filter Condition"></asp:Label>
                 </legend>
                 <div class="row">
 
@@ -208,9 +204,8 @@
                                             <i class="far fa-calendar-alt"></i>
                                         </span>
                                     </div>
-                                    <asp:TextBox ID="txtDueDateFrom" runat="server" CssClass="form-control" autocomplete="off" placeholder="yyyy/MM/dd" TextMode="DateTime"></asp:TextBox>
+                                    <asp:TextBox ID="txtDueDateFrom" runat="server" CssClass="form-control" autocomplete="off" placeholder="yyyy/mm/dd" TextMode="DateTime"></asp:TextBox>
                                     <ajaxToolkit:CalendarExtender ID="txtDueDateFrom_CalendarExtender" runat="server" BehaviorID="txtDueDateFrom_CalendarExtender" TargetControlID="txtDueDateFrom"></ajaxToolkit:CalendarExtender>
-                                    <%--<calendarextender ID="txtDueDateFrom_CalendarExtender" runat="server" BehaviorID="txtDueDateFrom_CalendarExtender" TargetControlID="txtDueDateFrom" />--%>
                                 </div>
                             </div>
                         </div>
@@ -233,9 +228,8 @@
                                             <i class="far fa-calendar-alt"></i>
                                         </span>
                                     </div>
-                                    <asp:TextBox ID="txtDueDateTo" runat="server" CssClass="form-control" autocomplete="off" placeholder="yyyy/MM/dd" TextMode="DateTime"></asp:TextBox>
-                                    <ajaxToolkit:CalendarExtender ID="txtDueDateTo_CalendarExtender" runat="server" BehaviorID="txtDueDateTo_CalendarExtender" TargetControlID="txtDueDateTo" />
-                                    <%--<ajaxToolkit:CalendarExtender ID="txtDueDateTo_CalendarExtender" runat="server" BehaviorID="txtDueDateTo_CalendarExtender" TargetControlID="txtDueDateTo" />--%>
+                                    <asp:TextBox ID="txtDueDateTo" runat="server" CssClass="form-control" autocomplete="off" placeholder="yyyy/mm/dd" TextMode="DateTime"></asp:TextBox>
+                                    <ajaxToolkit:CalendarExtender ID="txtDueDateTo_CalendarExtender" runat="server" BehaviorID="txtDueDateTo_CalendarExtender" TargetControlID="txtDueDateTo" ></ajaxToolkit:CalendarExtender>
                                 </div>
                             </div>
                         </div>
@@ -255,72 +249,62 @@
 
                 </div>
             </fieldset>
-        </div>
-
-        <%-- ----------------END Filter------------------%>
-
-
-        <%-- ----------------Browse------------------%>
-        <div class="pr-maint-browse">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="card card-border card-boxshadow mt-3">
-                        <div class="card-body card-boxshadow" style="overflow: auto;">
-                            <div class="d-flex align-items-center rowperpage-modify">
-                                <asp:Label ID="PRMaintenance_lbRecordPerPage" runat="server" Text="Record per Page" CssClass="mr-3"></asp:Label>
-                                <asp:DropDownList ID="ddRecordPerPage" runat="server" CssClass="" DataSourceID="dsRowPerPage" DataTextField="value" DataValueField="value" AutoPostBack="True" OnSelectedIndexChanged="ddRecordPerPage_SelectedIndexChanged" />
-                                &nbsp;/&nbsp;
-                                <asp:Label ID="lblTotal" runat="server" Text="0" CssClass="mr-3"></asp:Label>
-                            </div>
-                            <div class="grid-wrapper" id="PRMaint-scroll">
-                                <asp:GridView ID="grPRMaint" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" ShowHeaderWhenEmpty="True"
-                                    CssClass="table table-bordered table-modify" AllowPaging="True" DataSourceID="dsPRMaintBrowse" OnRowDataBound="grPRMaint_RowDataBound">
-                                    <RowStyle CssClass="rowstyle" />
-                                    <Columns>
-                                        <asp:BoundField DataField="pr_no" SortExpression="pr_no" HeaderText="PR No." HeaderStyle-HorizontalAlign="Center"></asp:BoundField>
-
-                                        <asp:BoundField DataField="request_by" SortExpression="request_by" HeaderText="Request By" HeaderStyle-HorizontalAlign="Center" />
-
-                                        <asp:BoundField DataField="supplier" SortExpression="supplier" HeaderText="Supplier" HeaderStyle-HorizontalAlign="Center" />
-
-                                        <asp:BoundField DataField="purchaser_email" HeaderText="Purchaser Email" SortExpression="purchaser_email" HeaderStyle-HorizontalAlign="Center" />
-
-                                        <asp:BoundField DataField="due_date" HeaderText="Due Date" SortExpression="due_date" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center" DataFormatString="{0:yyyy/MM/dd}" />
-
-                                        <asp:BoundField DataField="status" HeaderText="Status" SortExpression="status" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center" />
-
-                                        <asp:TemplateField HeaderText="Edit" HeaderStyle-Width="5px">
-                                            <ItemTemplate>
-                                                <asp:ImageButton ID="btEdit" runat="server" ImageUrl="~/Images/edit.png" CssClass="itemTemplate-icon" OnClick="btEdit_Click" />
-                                            </ItemTemplate>
-                                            <ItemStyle CssClass="text-center" />
-                                        </asp:TemplateField>
-
-                                        <asp:TemplateField HeaderText="Print" HeaderStyle-Width="5px">
-                                            <ItemTemplate>
-                                                <asp:ImageButton ID="btPrint" runat="server" ImageUrl="~/Images/print.png" CssClass="itemTemplate-icon" OnClick="btPrint_Click" />
-                                            </ItemTemplate>
-                                            <ItemStyle CssClass="text-center" />
-                                        </asp:TemplateField>
-
-                                        <asp:TemplateField HeaderText="Close" HeaderStyle-Width="5px">
-                                            <ItemTemplate>
-                                                <asp:ImageButton ID="btClose" runat="server" ImageUrl="~/Images/trash.png" CssClass="itemTemplate-icon" OnClick="btClose_Click" />
-                                            </ItemTemplate>
-                                            <ItemStyle CssClass="text-center" />
-                                        </asp:TemplateField>
-                                    </Columns>
-                                    <FooterStyle BackColor="#e9ecef" Font-Bold="True" />
-                                    <HeaderStyle BackColor="#e9ecef" HorizontalAlign="Center" />
-                                    <PagerStyle CssClass="pageStyle" HorizontalAlign="Center" />
-                                </asp:GridView>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <%-- ----------------END Filter------------------%>
+        
+            <%-- ----------------Browse------------------%>
+            <div class="d-flex align-items-center rowperpage-modify">
+                <asp:Label ID="PRMaintenance_lbRecordPerPage" runat="server" Text="Record per Page" CssClass="mr-3"></asp:Label>
+                <asp:DropDownList ID="ddRecordPerPage" runat="server" CssClass="" DataSourceID="dsRowPerPage" DataTextField="value" DataValueField="value" AutoPostBack="True" OnSelectedIndexChanged="ddRecordPerPage_SelectedIndexChanged" />
+                &nbsp;/&nbsp;
+                <asp:Label ID="lblTotal" runat="server" Text="0" CssClass="mr-3"></asp:Label>
             </div>
-        </div>
-        <%-- ----------------END Browse------------------%>
+
+            <div class="grid-wrapper" id="PRMaint-scroll">
+                <asp:GridView ID="grPRMaint" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" ShowHeaderWhenEmpty="True"
+                    CssClass="table table-bordered table-modify" AllowPaging="True" DataSourceID="dsPRMaintBrowse" OnRowDataBound="grPRMaint_RowDataBound">
+                    <RowStyle CssClass="rowstyle" />
+                    <Columns>
+                        <asp:BoundField DataField="pr_no" SortExpression="pr_no" HeaderText="PR No." HeaderStyle-HorizontalAlign="Center"></asp:BoundField>
+
+                        <asp:BoundField DataField="request_by" SortExpression="request_by" HeaderText="Request By" HeaderStyle-HorizontalAlign="Center" />
+
+                        <asp:BoundField DataField="supplier" SortExpression="supplier" HeaderText="Supplier" HeaderStyle-HorizontalAlign="Center" />
+
+                        <asp:BoundField DataField="purchaser_email" HeaderText="Purchaser Email" SortExpression="purchaser_email" HeaderStyle-HorizontalAlign="Center" />
+
+                        <asp:BoundField DataField="due_date" HeaderText="Due Date" SortExpression="due_date" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center" DataFormatString="{0:yyyy/MM/dd}" />
+
+                        <asp:BoundField DataField="status" HeaderText="Status" SortExpression="status" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center" />
+
+                        <asp:TemplateField HeaderText="Edit" HeaderStyle-Width="5px">
+                            <ItemTemplate>
+                                <asp:ImageButton ID="btEdit" runat="server" ImageUrl="~/Images/edit.png" CssClass="itemTemplate-icon" OnClick="btEdit_Click" />
+                            </ItemTemplate>
+                            <ItemStyle CssClass="text-center" />
+                        </asp:TemplateField>
+
+                        <asp:TemplateField HeaderText="Print" HeaderStyle-Width="5px">
+                            <ItemTemplate>
+                                <asp:ImageButton ID="btPrint" runat="server" ImageUrl="~/Images/print.png" CssClass="itemTemplate-icon" OnClick="btPrint_Click" />
+                            </ItemTemplate>
+                            <ItemStyle CssClass="text-center" />
+                        </asp:TemplateField>
+
+                        <asp:TemplateField HeaderText="Close" HeaderStyle-Width="5px">
+                            <ItemTemplate>
+                                <asp:ImageButton ID="btClose" runat="server" ImageUrl="~/Images/trash.png" CssClass="itemTemplate-icon" OnClick="btClose_Click" />
+                            </ItemTemplate>
+                            <ItemStyle CssClass="text-center" />
+                        </asp:TemplateField>
+                    </Columns>
+                    <FooterStyle BackColor="#e9ecef" Font-Bold="True" />
+                    <HeaderStyle BackColor="#e9ecef" HorizontalAlign="Center" />
+                    <PagerStyle CssClass="pageStyle" HorizontalAlign="Center" />
+                </asp:GridView>
+            </div>
+            <%-- ----------------END Browse------------------%>
+        </div>    
+        
     </div>
 
     <script>

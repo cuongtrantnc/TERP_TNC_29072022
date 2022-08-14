@@ -10,79 +10,79 @@
 namespace TERP.Forms.PMS {
     
     
-    public partial class frmCriteriaSupplierPerformanceMaint {
+    public partial class frmEvaluateContentDetailMaintenance {
         
         /// <summary>
-        /// frmCriteriaSupplierPerformanceMaint_lblTitle control.
+        /// frmEvaluateContentDetailMaintenance_lblTitle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label frmCriteriaSupplierPerformanceMaint_lblTitle;
+        protected global::System.Web.UI.WebControls.Label frmEvaluateContentDetailMaintenance_lblTitle;
         
         /// <summary>
-        /// frmCriteriaSupplierPerformanceMaint_btnGoBack control.
+        /// frmEvaluateContentDetailMaintenance_btnGoBack control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button frmCriteriaSupplierPerformanceMaint_btnGoBack;
+        protected global::System.Web.UI.WebControls.Button frmEvaluateContentDetailMaintenance_btnGoBack;
         
         /// <summary>
-        /// frmCriteriaSupplierPerformanceMaint_btnCreateNew control.
+        /// frmEvaluateContentDetailMaintenance_btnCreateNew control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button frmCriteriaSupplierPerformanceMaint_btnCreateNew;
+        protected global::System.Web.UI.WebControls.Button frmEvaluateContentDetailMaintenance_btnCreateNew;
         
         /// <summary>
-        /// frmCriteriaSupplierPerformanceMaint_btnUploadNew control.
+        /// frmEvaluateContentDetailMaintenance_btnUploadNew control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button frmCriteriaSupplierPerformanceMaint_btnUploadNew;
+        protected global::System.Web.UI.WebControls.Button frmEvaluateContentDetailMaintenance_btnUploadNew;
         
         /// <summary>
-        /// fieldSet_Filter control.
+        /// frmEvaluateContentDetailMaintenance_fieldSetFilter control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label fieldSet_Filter;
+        protected global::System.Web.UI.WebControls.Label frmEvaluateContentDetailMaintenance_fieldSetFilter;
         
         /// <summary>
-        /// frmCriteriaSupplierPerformanceMaint_lblCode control.
+        /// frmEvaluateContentDetailMaintenance_lblSupplCode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label frmCriteriaSupplierPerformanceMaint_lblCode;
+        protected global::System.Web.UI.WebControls.Label frmEvaluateContentDetailMaintenance_lblSupplCode;
         
         /// <summary>
-        /// frmCriteriaSupplierPerformanceMaint_txtCode control.
+        /// frmEvaluateContentDetailMaintenance_txtSupplCode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox frmCriteriaSupplierPerformanceMaint_txtCode;
+        protected global::System.Web.UI.WebControls.TextBox frmEvaluateContentDetailMaintenance_txtSupplCode;
         
         /// <summary>
-        /// frmCriteriaSupplierPerformanceMaint_lblStatus control.
+        /// frmEvaluateContentDetailMaintenance_lblStatus control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label frmCriteriaSupplierPerformanceMaint_lblStatus;
+        protected global::System.Web.UI.WebControls.Label frmEvaluateContentDetailMaintenance_lblStatus;
         
         /// <summary>
         /// ddStatus control.
@@ -94,31 +94,13 @@ namespace TERP.Forms.PMS {
         protected global::System.Web.UI.WebControls.DropDownList ddStatus;
         
         /// <summary>
-        /// frmCriteriaSupplierPerformanceMaint_lblCategory control.
+        /// frmEvaluateContentDetailMaintenance_lblContent control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label frmCriteriaSupplierPerformanceMaint_lblCategory;
-        
-        /// <summary>
-        /// ddCategory control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddCategory;
-        
-        /// <summary>
-        /// frmCriteriaSupplierPerformanceMaint_lblContent control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label frmCriteriaSupplierPerformanceMaint_lblContent;
+        protected global::System.Web.UI.WebControls.Label frmEvaluateContentDetailMaintenance_lblContent;
         
         /// <summary>
         /// ddContent control.
@@ -130,49 +112,31 @@ namespace TERP.Forms.PMS {
         protected global::System.Web.UI.WebControls.DropDownList ddContent;
         
         /// <summary>
-        /// frmCriteriaSupplierPerformanceMaint_lblContentDetail control.
+        /// frmEvaluateContentDetailMaintenance_filterBtnSreach control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label frmCriteriaSupplierPerformanceMaint_lblContentDetail;
+        protected global::System.Web.UI.WebControls.Button frmEvaluateContentDetailMaintenance_filterBtnSreach;
         
         /// <summary>
-        /// ddContentDetail control.
+        /// frmEvaluateContentDetailMaintenance_filterBtnClear control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddContentDetail;
+        protected global::System.Web.UI.WebControls.Button frmEvaluateContentDetailMaintenance_filterBtnClear;
         
         /// <summary>
-        /// frmCriteriaSupplierPerformanceMaint_filterBtnSearch control.
+        /// frmEvaluateContentDetailMaintenance_lblRecordPage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button frmCriteriaSupplierPerformanceMaint_filterBtnSearch;
-        
-        /// <summary>
-        /// frmCriteriaSupplierPerformanceMaint_filterBtnClear control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button frmCriteriaSupplierPerformanceMaint_filterBtnClear;
-        
-        /// <summary>
-        /// frmCriteriaSupplierPerformanceMaint_lblRecordPage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label frmCriteriaSupplierPerformanceMaint_lblRecordPage;
+        protected global::System.Web.UI.WebControls.Label frmEvaluateContentDetailMaintenance_lblRecordPage;
         
         /// <summary>
         /// ddRecordPerPage control.
@@ -184,49 +148,67 @@ namespace TERP.Forms.PMS {
         protected global::System.Web.UI.WebControls.DropDownList ddRecordPerPage;
         
         /// <summary>
-        /// grCriteriaSupplierPerformanceMaint control.
+        /// frmEvaluateContentDetailMaintenance_lblTotal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grCriteriaSupplierPerformanceMaint;
+        protected global::System.Web.UI.WebControls.Label frmEvaluateContentDetailMaintenance_lblTotal;
         
         /// <summary>
-        /// fieldSet_Form control.
+        /// frmEvaluateContentDetailMaintenance_lblValue control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label fieldSet_Form;
+        protected global::System.Web.UI.WebControls.Label frmEvaluateContentDetailMaintenance_lblValue;
         
         /// <summary>
-        /// frmCriteriaSupplierPerformanceMaint_formlblCode control.
+        /// grEvaluateContent control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label frmCriteriaSupplierPerformanceMaint_formlblCode;
+        protected global::System.Web.UI.WebControls.GridView grEvaluateContent;
         
         /// <summary>
-        /// frmCriteriaSupplierPerformanceMaint_formtxtCode control.
+        /// frmEvaluateContentDetailMaintenance_fieldSetForm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox frmCriteriaSupplierPerformanceMaint_formtxtCode;
+        protected global::System.Web.UI.WebControls.Label frmEvaluateContentDetailMaintenance_fieldSetForm;
         
         /// <summary>
-        /// frmCriteriaSupplierPerformanceMaint_formlblStatus control.
+        /// frmEvaluateContentDetailMaintenance_formlblCode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label frmCriteriaSupplierPerformanceMaint_formlblStatus;
+        protected global::System.Web.UI.WebControls.Label frmEvaluateContentDetailMaintenance_formlblCode;
+        
+        /// <summary>
+        /// frmEvaluateContentDetailMaintenance_formtxtCode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox frmEvaluateContentDetailMaintenance_formtxtCode;
+        
+        /// <summary>
+        /// frmEvaluateContentDetailMaintenance_formlblStatus control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label frmEvaluateContentDetailMaintenance_formlblStatus;
         
         /// <summary>
         /// ddFormStatus control.
@@ -238,31 +220,31 @@ namespace TERP.Forms.PMS {
         protected global::System.Web.UI.WebControls.DropDownList ddFormStatus;
         
         /// <summary>
-        /// frmCriteriaSupplierPerformanceMaint_formlblName control.
+        /// frmEvaluateContentDetailMaintenance_formlblName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label frmCriteriaSupplierPerformanceMaint_formlblName;
+        protected global::System.Web.UI.WebControls.Label frmEvaluateContentDetailMaintenance_formlblName;
         
         /// <summary>
-        /// frmCriteriaSupplierPerformanceMaint_formtxtName control.
+        /// frmEvaluateContentDetailMaintenance_formtxtName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox frmCriteriaSupplierPerformanceMaint_formtxtName;
+        protected global::System.Web.UI.WebControls.TextBox frmEvaluateContentDetailMaintenance_formtxtName;
         
         /// <summary>
-        /// frmCriteriaSupplierPerformanceMaint_formlblContent control.
+        /// frmEvaluateContentDetailMaintenance_formlblContent control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label frmCriteriaSupplierPerformanceMaint_formlblContent;
+        protected global::System.Web.UI.WebControls.Label frmEvaluateContentDetailMaintenance_formlblContent;
         
         /// <summary>
         /// ddFormContent control.
@@ -274,103 +256,67 @@ namespace TERP.Forms.PMS {
         protected global::System.Web.UI.WebControls.DropDownList ddFormContent;
         
         /// <summary>
-        /// frmCriteriaSupplierPerformanceMaint_formlblCategory control.
+        /// frmEvaluateContentDetailMaintenance_formlblRemark control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label frmCriteriaSupplierPerformanceMaint_formlblCategory;
+        protected global::System.Web.UI.WebControls.Label frmEvaluateContentDetailMaintenance_formlblRemark;
         
         /// <summary>
-        /// ddFormCategory control.
+        /// frmSupplierMaintenance_formtxtRemark control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddFormCategory;
+        protected global::System.Web.UI.WebControls.TextBox frmSupplierMaintenance_formtxtRemark;
         
         /// <summary>
-        /// frmCriteriaSupplierPerformanceMaint_formlblContentDetail control.
+        /// frmEvaluateContentDetailMaintenance_formlblOrder control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label frmCriteriaSupplierPerformanceMaint_formlblContentDetail;
+        protected global::System.Web.UI.WebControls.Label frmEvaluateContentDetailMaintenance_formlblOrder;
         
         /// <summary>
-        /// ddFormContentDetail control.
+        /// frmEvaluateContentDetailMaintenance_formtxtOrder control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddFormContentDetail;
+        protected global::System.Web.UI.WebControls.TextBox frmEvaluateContentDetailMaintenance_formtxtOrder;
         
         /// <summary>
-        /// frmCriteriaSupplierPerformanceMaint_formlblPoints control.
+        /// frmEvaluateContentDetailMaintenance_btnSave control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label frmCriteriaSupplierPerformanceMaint_formlblPoints;
+        protected global::System.Web.UI.WebControls.Button frmEvaluateContentDetailMaintenance_btnSave;
         
         /// <summary>
-        /// frmCriteriaSupplierPerformanceMaint_formtxtPoints control.
+        /// frmEvaluateContentDetailMaintenance_btnCancel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox frmCriteriaSupplierPerformanceMaint_formtxtPoints;
+        protected global::System.Web.UI.WebControls.Button frmEvaluateContentDetailMaintenance_btnCancel;
         
         /// <summary>
-        /// frmCriteriaSupplierPerformanceMaint_formlblOrder control.
+        /// frmEvaluateContentDetailMaintenance_lblDesc control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label frmCriteriaSupplierPerformanceMaint_formlblOrder;
-        
-        /// <summary>
-        /// frmCriteriaSupplierPerformanceMaint_formtxtOrder control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox frmCriteriaSupplierPerformanceMaint_formtxtOrder;
-        
-        /// <summary>
-        /// frmCriteriaSupplierPerformanceMaint_btnSave control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button frmCriteriaSupplierPerformanceMaint_btnSave;
-        
-        /// <summary>
-        /// frmCriteriaSupplierPerformanceMaint_btnCancel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button frmCriteriaSupplierPerformanceMaint_btnCancel;
-        
-        /// <summary>
-        /// frmCriteriaSupplierPerformanceMaint_lblDesc control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label frmCriteriaSupplierPerformanceMaint_lblDesc;
+        protected global::System.Web.UI.WebControls.Label frmEvaluateContentDetailMaintenance_lblDesc;
         
         /// <summary>
         /// fileUpload control.
@@ -382,40 +328,40 @@ namespace TERP.Forms.PMS {
         protected global::System.Web.UI.WebControls.FileUpload fileUpload;
         
         /// <summary>
-        /// frmCriteriaSupplierPerformanceMaint_lblNote control.
+        /// frmEvaluateContentDetailMaintenance_lblNote control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label frmCriteriaSupplierPerformanceMaint_lblNote;
+        protected global::System.Web.UI.WebControls.Label frmEvaluateContentDetailMaintenance_lblNote;
         
         /// <summary>
-        /// frmCriteriaSupplierPerformanceMaint_lblComment control.
+        /// frmEvaluateContentDetailMaintenance_lblComment control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label frmCriteriaSupplierPerformanceMaint_lblComment;
+        protected global::System.Web.UI.WebControls.Label frmEvaluateContentDetailMaintenance_lblComment;
         
         /// <summary>
-        /// frmCriteriaSupplierPerformanceMaint_link control.
+        /// frmEvaluateContentDetailMaintenance_link control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button frmCriteriaSupplierPerformanceMaint_link;
+        protected global::System.Web.UI.WebControls.Button frmEvaluateContentDetailMaintenance_link;
         
         /// <summary>
-        /// frmCriteriaSupplierPerformanceMaint_btnImport control.
+        /// frmEvaluateContentDetailMaintenance_btnImport control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button frmCriteriaSupplierPerformanceMaint_btnImport;
+        protected global::System.Web.UI.WebControls.Button frmEvaluateContentDetailMaintenance_btnImport;
         
         /// <summary>
         /// lblUpdateTitle control.

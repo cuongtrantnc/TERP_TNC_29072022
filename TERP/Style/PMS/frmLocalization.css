@@ -1,40 +1,18 @@
 ﻿
-/* Style for menu frmPOHistory */
+/* Style for menu Localization */
+
 :root {
     --fontsize: 0.85 rem;
 }
 
-.filter {
-    /*margin-top: 10px;*/
-    padding: 20px;
-}
-
-.filter-item {
-    display: flex;
-    align-items: center;
-    padding: 5px;
-}
-
-.filter-item > span {
-    width: 150px;
-    text-align: right;
-    margin-right: 5px;
+.form-label {
     font-weight: 500;
 }
 
-.actions {
-    margin-top: 15px;
-    display:flex;
-    justify-content:flex-end;
-    align-items:center;
-}
-
-.actions input {
-    margin-right: 5px !important;
-}
-
-.pr-maint-browse {
-    margin-top: 20px;
+.col-button {
+   display:flex;
+   justify-content:flex-end;
+   align-items:flex-end;
 }
 
 .grid-wrapper {
@@ -42,17 +20,17 @@
     overflow: auto;
 }
 
-.table.table-modify > tbody {
+.table.table-bordered > tbody {
     position: relative;
 }
 
-.table.table-modify > tbody > tr:first-child {
+.table.table-bordered > tbody > tr:first-child {
     position: sticky;
     top: -1px;
     left: 0;
 }
 
-.table.table-modify .rowstyle td {
+.rowstyle td {
     padding: 3px;
 }
 
@@ -61,8 +39,10 @@
     margin-bottom: 10px;
 }
 
-.button-font-size {
+.query-button{
     font-size: var(--fontsize);
+    min-width:120px;
+
 }
 
 .fieldSet {
@@ -70,7 +50,6 @@
     border: 1px solid #b9c3c5;
     padding: 10px;
     border-radius: 5px;
-    margin-bottom:25px;
 }
 
 .fieldSet_legend {

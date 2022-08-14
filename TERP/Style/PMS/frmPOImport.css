@@ -29,7 +29,10 @@ input[type=file]::-webkit-file-upload-button {
     margin-top: 20px;
 }
 
-.note {
+.box_icon {
+    display: block;
+    color: #78837b;
+    font-size: 40px
 }
 
 .note_span {

@@ -10,16 +10,16 @@
 namespace TERP.Forms.PMS {
     
     
-    public partial class frmPOReport {
+    public partial class PRReport {
         
         /// <summary>
-        /// POReport_lblModuleTitle control.
+        /// frmPRReport_lblTitle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label POReport_lblModuleTitle;
+        protected global::System.Web.UI.WebControls.Label frmPRReport_lblTitle;
         
         /// <summary>
         /// CrystalReportViewer control.

@@ -103,6 +103,51 @@ namespace TERP.Forms.PMS {
         protected global::System.Web.UI.WebControls.Button POApprovalMaintenance_btnClear;
         
         /// <summary>
+        /// upPOApprovalMaintBrowse control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel upPOApprovalMaintBrowse;
+        
+        /// <summary>
+        /// POApprovalMaintenance_lblRecordPerPage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label POApprovalMaintenance_lblRecordPerPage;
+        
+        /// <summary>
+        /// ddRecordPerPage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddRecordPerPage;
+        
+        /// <summary>
+        /// lblTotal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTotal;
+        
+        /// <summary>
+        /// grPOApprovalMaintenance control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView grPOApprovalMaintenance;
+        
+        /// <summary>
         /// POApprovalMaintenance_lblModaltitle control.
         /// </summary>
         /// <remarks>
@@ -218,51 +263,6 @@ namespace TERP.Forms.PMS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button POApprovalMaintenance_btnSave;
-        
-        /// <summary>
-        /// upPOApprovalMaintBrowse control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.UpdatePanel upPOApprovalMaintBrowse;
-        
-        /// <summary>
-        /// POApprovalMaintenance_lblRecordPerPage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label POApprovalMaintenance_lblRecordPerPage;
-        
-        /// <summary>
-        /// ddRecordPerPage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddRecordPerPage;
-        
-        /// <summary>
-        /// lblTotal control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTotal;
-        
-        /// <summary>
-        /// grPOApprovalMaintenance control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grPOApprovalMaintenance;
         
         /// <summary>
         /// dsRowPerPage control.

@@ -9,11 +9,11 @@ using CrystalDecisions.Shared;
 
 namespace TERP.Forms.PMS
 {
-    public partial class frmPOReport : System.Web.UI.Page
+    public partial class PRReport : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string rptFile = "/terp/Report/POReport.rpt";
+            string rptFile = "/terp/Report/PRReport.rpt";
             ReportDocument crystalReport;
 
             crystalReport = new ReportDocument();
@@ -21,11 +21,6 @@ namespace TERP.Forms.PMS
 
 
             CrystalReportViewer.ReportSource = crystalReport;
-        }
-
-        protected void POReport_btQuery_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

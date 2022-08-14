@@ -515,10 +515,81 @@ function showSupplierDeleteModal() {
     });
 };
 
+//FUNCTION SHOW BLOCK CREATE NEW EVALUATE CONTENT && EDIT EVALUATE CONTENT  
+function showEvaluate_Form() {
+    $(document).ready(function () {
+        $('#EvaluateFilter').addClass('evaluate_filter');
+        $('#EvaluateForm').removeClass('evaluate_form');
+
+        $('#btnGoBack').removeClass('action_button-hide');
+        $('#btnCreateNew').addClass('action_button-hide');
+
+        //action for Evaluate content
+        $('#frmEvaluateContentlMaintenance_btnUploadNew').removeClass('btn-outline-success');
+        $('#frmEvaluateContentMaintenance_btnUploadNew').addClass('bg-gradient-success');
+
+        //action for Evaluate content detail
+        $('#frmEvaluateContentDetailMaintenance_btnUploadNew').removeClass('btn-outline-success');
+        $('#frmEvaluateContentDetailMaintenance_btnUploadNew').addClass('bg-gradient-success');
+    });
+};
+
+//FUNCTION SHOW BLOCK IMPORT EVALUATE CONTENT
+function showEvaluate_Import() {
+    $(document).ready(function () {
+        $('#EvaluateFilter').addClass('evaluate_filter');
+        $('#EvaluateImport').removeClass('evaluate_import');
+
+        $('#btnCreateNew').removeClass('action_button-hide');
+        $('#btnUploadNew').addClass('action_button-hide');
+        $('#btnGoBack').removeClass('action_button-hide');
+    });
+};
+
+//FUNCTION SHOW MODAL DELETE MENU EVALUATE and EVALUATE CONTENT DETAIL
+function showEvaluateDeleteModal() {
+    $(document).ready(function () {
+        $('#EvaluateModalDelete').modal('show');
+    });
+};
+
+//FUNCTION SHOW MODAL UPDATE MENU EVALUATE and EVALUATE CONTENT DETAIL
+function showEvaluateUpdateModal() {
+    $(document).ready(function () {
+        $('#EvaluateModalUpdate').modal('show');
+    });
+};
+
 //FUNCTION SHOW MODAL SUPPLIER COMPARISON REPORT MENU 
 function showComparisonReport() {
     $(document).ready(function () {
         $('#SupplierComparison_ViewReport').modal('show');
+    });
+};
+
+//FUNCTION SHOW BLOCK CREATE NEW Criteria Supplier && EDIT Creteria Supplier
+function showCriteriaSupplier_Form() {
+    $(document).ready(function () {
+        $('#CriteriaMaintFilter').addClass('supplier_filter');
+        $('#CriteriaMaintForm').removeClass('supplier_form');
+
+        $('#btnGoBack').removeClass('action_button-hide');
+        $('#btnCreateNew').addClass('action_button-hide');
+
+        $('#frmCriteriaSupplierPerformanceMaint_btnUploadNew').removeClass('btn-outline-success');
+        $('#frmCriteriaSupplierPerformanceMaint_btnUploadNew').addClass('bg-gradient-success');
+    });
+};
+
+//FUNCTION SHOW BLOCK IMPORT Criteria Supplier
+function showCriteriaSupplier_Import() {
+    $(document).ready(function () {
+        $('#CriteriaMaintFilter').addClass('supplier_filter');
+        $('#CriteriaMaintImport').removeClass('supplier_import');
+
+        $('#btnCreateNew').removeClass('action_button-hide');
+        $('#btnUploadNew').addClass('action_button-hide');
+        $('#btnGoBack').removeClass('action_button-hide');
     });
 };
 
@@ -534,3 +605,16 @@ function showSupplierEvaluation_Form() {
     });
 };
 
+//FUNCTION SHOW MODAL DELETE MENU CRITERIA
+function showCriteriaDeleteModal() {
+    $(document).ready(function () {
+        $('#CriteriaModalDelete').modal('show');
+    });
+};
+
+//FUNCTION SHOW MODAL UPDATE MENU CRITERIAL
+function showCriteriaUpdateModal() {
+    $(document).ready(function () {
+        $('#CriteriaModalUpdate').modal('show');
+    });
+};

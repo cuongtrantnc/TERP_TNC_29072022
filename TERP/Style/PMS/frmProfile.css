@@ -1,61 +1,84 @@
 ﻿
+/* slyle for menu Profile Account */
 
-.Profile {
-    display:flex;
-    flex-wrap: wrap;
+:root {
+    --fontsize: 0.85rem;
+    --button_width: 120px;
 }
 
-.Profile__avata {
-    margin-right: 20px;
+input[type=file]::-webkit-file-upload-button {
+    color: #ffffff;
+    border: none;
+    padding: 6px 12px;
+    background: #28a745 linear-gradient(180deg, #48b461, #28a745) repeat-x !important;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
-.Profile__infor {
-    flex: 1 1 auto;
-}
-
-.Profile__image {
-    text-align: center;
-}
-
-.Profile__image img {
-    height: 256px;
-    width: 256px;
-    object-fit:cover;
-}
-
-.Profile__upload {
-    display: flex;
-    flex-direction: column;
-
-    margin-top: 20px;
-}
-
-.Form__label {
+.title_label {
     font-weight: 500;
+    font-size: 1.5rem;
 }
 
-.Form__footer {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin: 20px 0;
-    margin-left: -15px;
+
+
+.profile_avata {
+    text-align: center;
+    margin-top: auto;
+    padding: 0 20px 20px;
+    position: relative;
 }
 
-.Form__button {
-    width: 120px;
+.profile_avata:before {
+    content: '';
+    position: absolute;
+    top: 14%;
+    left: 7%;
+    height: 270px;
+    width: 1px;
+    background-color: rgba(0, 0, 0, 0.125);
 }
 
-.Form__button--upload {
-    margin-top: 16px;
+.profile_image {
+    height: 212px;
+    width: 212px;
+    padding: 5px;
+    border-radius: 50%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #ffffff;
+    border: 1px dashed #dbdde0;
 }
+
+.profile_image img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile_label {
+    margin: 8px 0;
+    display: block;
+}
+
+.form_item {
+    font-size: var(--fontsize);
+}
+
+.form-control {
+    height: auto !important;
+    font-size: var(--fontsize) !important;
+}
+
+.form_button {
+    width: var(--button_width);
+}
+
 
 @media screen and (max-width: 766px) {
-    .Form__footer {
-        justify-content: flex-start;
-    }
 
-    .Form__button {
+    .form_button {
         width: 100%;
     }
 }

@@ -645,7 +645,10 @@
     <Content Include="crystalreportviewers13\urlreporting\activexviewer.js" />
     <Content Include="crystalreportviewers13\urlreporting\appletviewer.js" />
     <Content Include="Forms\PMS\frmCriteriaSupplierPerformanceMaint.aspx" />
+    <Content Include="Forms\PMS\frmEvaluateContentDetailMaintenance.aspx" />
+    <Content Include="Forms\PMS\frmEvaluateContentMaintenance.aspx" />
     <Content Include="Forms\PMS\frmPrintPreview.aspx" />
+    <Content Include="Forms\PMS\frmPRReport.aspx" />
     <Content Include="Forms\PMS\frmSupplierComparison.aspx" />
     <Content Include="Forms\PMS\frmSupplierComparisonReport.aspx" />
     <Content Include="Forms\PMS\frmSupplierEvaluation.aspx" />
@@ -717,14 +720,18 @@
     <Content Include="Style\CountEmailWs.asmx" />
     <Content Include="Style\LoginForm\styleLogin.css" />
     <Content Include="Style\PMS\frmCriteriaSupplierPerformanceMaint.css" />
+    <Content Include="Style\PMS\frmEvaluateContentDetailMaintenance.css" />
+    <Content Include="Style\PMS\frmEvaluateContentMaintenance.css" />
     <Content Include="Style\PMS\frmItemBrowse.css" />
     <Content Include="Style\PMS\frmItemImport.css" />
+    <Content Include="Style\PMS\frmLocalization.css" />
     <Content Include="Style\PMS\frmPOApproval.css" />
     <Content Include="Style\PMS\frmPOApprovalMaintenance.css" />
     <Content Include="Style\PMS\frmPOBrowse.css" />
     <Content Include="Style\PMS\frmPOCompleted.css" />
     <Content Include="Style\PMS\frmPOHistory.css" />
     <Content Include="Style\PMS\frmPOImport.css" />
+    <Content Include="Style\PMS\frmPOReport.css" />
     <Content Include="Style\PMS\frmPRApproval.css" />
     <Content Include="Style\PMS\frmPRApprovalMaintenance.css" />
     <Content Include="Style\PMS\frmPRCompleted.css" />
@@ -732,6 +739,7 @@
     <Content Include="Style\PMS\frmPRImport.css" />
     <Content Include="Style\PMS\frmPRMaintenance.css" />
     <Content Include="Style\PMS\frmProfile.css" />
+    <Content Include="Style\PMS\frmPRReport.css" />
     <Content Include="Style\PMS\frmSite.css" />
     <Content Include="Style\PMS\frmSupplierComparison.css" />
     <Content Include="Style\PMS\frmSupplierEvaluation.css" />
@@ -2874,12 +2882,33 @@
     <Compile Include="Forms\PMS\frmCriteriaSupplierPerformanceMaint.aspx.designer.cs">
       <DependentUpon>frmCriteriaSupplierPerformanceMaint.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Forms\PMS\frmEvaluateContentDetailMaintenance.aspx.cs">
+      <DependentUpon>frmEvaluateContentDetailMaintenance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\PMS\frmEvaluateContentDetailMaintenance.aspx.designer.cs">
+      <DependentUpon>frmEvaluateContentDetailMaintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PMS\frmEvaluateContentMaintenance.aspx.cs">
+      <DependentUpon>frmEvaluateContentMaintenance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\PMS\frmEvaluateContentMaintenance.aspx.designer.cs">
+      <DependentUpon>frmEvaluateContentMaintenance.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Forms\PMS\frmPrintPreview.aspx.cs">
       <DependentUpon>frmPrintPreview.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Forms\PMS\frmPrintPreview.aspx.designer.cs">
       <DependentUpon>frmPrintPreview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PMS\frmPRReport.aspx.cs">
+      <DependentUpon>frmPRReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\PMS\frmPRReport.aspx.designer.cs">
+      <DependentUpon>frmPRReport.aspx</DependentUpon>
     </Compile>
     <Compile Include="Forms\PMS\frmSupplierComparison.aspx.cs">
       <DependentUpon>frmSupplierComparison.aspx</DependentUpon>
@@ -3073,6 +3102,18 @@
     </Compile>
     <Compile Include="Libs\ExcelHelper.cs" />
     <Compile Include="Libs\Localization.cs" />
+    <Compile Include="Report\POReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>POReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\PRReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PRReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Report\rpPRDemo.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -3465,6 +3506,14 @@
     <Folder Include="Upload\" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Report\POReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>POReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\PRReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PRReport.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\rpPRDemo.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rpPRDemo.cs</LastGenOutput>
