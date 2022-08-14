@@ -21,6 +21,7 @@
                         <div id="divFilter" class="box">
                             <div class="text-center">
                                 <asp:Label runat="server" ID="ItemImport_lblDesc" class="box_description">Drag and Drop to upload data file (*.csv, *.xlsx) or import file from your computer</asp:Label>
+                                <span class="box_icon"><i class="fa fa-cloud-upload-alt"></i></span>
                                 <asp:FileUpload ID="fileUpload" runat="server" CssClass="box_import"/>
                             </div>
                         </div>
