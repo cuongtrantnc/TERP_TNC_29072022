@@ -43,11 +43,12 @@
             </div>
             <%-- ------------------End Header Info----------------------------%>
 
-            <%-- ------------------Browse Filter----------------------------%>
-            <div class="filter card card-border card-boxshadow">
+            
+            <div class="filter card card-border card-boxshadow" style="overflow: auto;">
+                <%-- ------------------Browse Filter----------------------------%>
                 <fieldset class="fieldSet">
                     <legend class="fieldSet_legend">
-                        <asp:Label runat="server" ID="POCompleted_fieldSetFilter" Text="Filter"></asp:Label>
+                        <asp:Label runat="server" ID="POCompleted_fieldSetFilter" Text="Filter Condition"></asp:Label>
                     </legend>
                     <div class="filter-list">
                         <div class="row">
@@ -119,50 +120,42 @@
                         </div>
                     </div>
                 </fieldset>
-            </div>
-            <%-- ------------------End Browse Filter----------------------------%>
+                <%-- ------------------End Browse Filter----------------------------%>
 
-            <%-- ------------------Browse----------------------------%>
-            <div class="pr-maint-browse">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="card card-border card-boxshadow mt-3">
-                            <div class="card-body card-boxshadow" style="overflow: auto;">
-                                <div class="d-flex align-items-center rowperpage-modify">
-                                    <asp:Label ID="POCompleted_lbRecordPerPage" runat="server" Text="Record per Page" CssClass="mr-3"></asp:Label>
-                                    <asp:DropDownList ID="ddRecordPerPage" runat="server" CssClass="" DataSourceID="dsRowPerPage" DataTextField="value" DataValueField="value" AutoPostBack="True" OnSelectedIndexChanged="ddRecordPerPage_SelectedIndexChanged" />
-                                    &nbsp;/&nbsp;
-                            <asp:Label ID="lblTotal" runat="server" Text="0" CssClass="mr-3"></asp:Label>
-                                </div>
-                                <div class="grid-wrapper">
-                                    <asp:GridView ID="grPOCompleted" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" ShowHeaderWhenEmpty="True"
-                                        CssClass="table table-bordered table-modify" AllowPaging="True" DataSourceID="dsPOCompletedBrowse">
-                                        <RowStyle CssClass="rowstyle" />
-                                        <Columns>
-                                            <asp:BoundField DataField="po_no" SortExpression="po_no" HeaderText="PO NO." HeaderStyle-HorizontalAlign="Center"></asp:BoundField>
-                                            <asp:BoundField DataField="line" SortExpression="line" HeaderText="Line" HeaderStyle-HorizontalAlign="Center" />
-                                            <asp:BoundField DataField="supplier" SortExpression="supplier" HeaderText="Supplier" HeaderStyle-HorizontalAlign="Center" />
-                                            <asp:BoundField DataField="supplier_name" SortExpression="supplier_name" HeaderText="Supplier_name" HeaderStyle-HorizontalAlign="Center" />
-                                            <asp:BoundField DataField="item_number" SortExpression="item_number" HeaderText="Item Number" HeaderStyle-HorizontalAlign="Center" />
-                                            <asp:BoundField DataField="description" SortExpression="description" HeaderText="Description" HeaderStyle-HorizontalAlign="Center" />
-                                            <asp:BoundField DataField="required_qty" SortExpression="required_qty" HeaderText="Qty Required" HeaderStyle-HorizontalAlign="Center" />
-                                            <asp:BoundField DataField="due_date" SortExpression="due_date" HeaderText="Due Date" HeaderStyle-HorizontalAlign="Center" DataFormatString="{0:MM/dd/yyyy}" />
-                                            <asp:BoundField DataField="status_id" SortExpression="status_id" HeaderText="status_id" HeaderStyle-HorizontalAlign="Center" Visible="false" />
-                                            <asp:BoundField DataField="status" SortExpression="status" HeaderText="Status" HeaderStyle-HorizontalAlign="Center" />
-                                        </Columns>
-                                        <FooterStyle BackColor="#e9ecef" Font-Bold="True" />
-                                        <HeaderStyle BackColor="#e9ecef" HorizontalAlign="Center" />
-                                        <PagerStyle CssClass="pageStyle" HorizontalAlign="Center" />
-                                    </asp:GridView>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <%-- ------------------Browse----------------------------%>
+                <div class="d-flex align-items-center rowperpage-modify">
+                    <asp:Label ID="POCompleted_lbRecordPerPage" runat="server" Text="Record per Page" CssClass="mr-3"></asp:Label>
+                    <asp:DropDownList ID="ddRecordPerPage" runat="server" CssClass="" DataSourceID="dsRowPerPage" DataTextField="value" DataValueField="value" AutoPostBack="True" OnSelectedIndexChanged="ddRecordPerPage_SelectedIndexChanged" />
+                    &nbsp;/&nbsp;
+                    <asp:Label ID="lblTotal" runat="server" Text="0" CssClass="mr-3"></asp:Label>
                 </div>
+
+                <div class="grid-wrapper">
+                    <asp:GridView ID="grPOCompleted" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" ShowHeaderWhenEmpty="True"
+                        CssClass="table table-bordered table-modify" AllowPaging="True" DataSourceID="dsPOCompletedBrowse">
+                        <RowStyle CssClass="rowstyle" />
+                        <Columns>
+                            <asp:BoundField DataField="po_no" SortExpression="po_no" HeaderText="PO NO." HeaderStyle-HorizontalAlign="Center"></asp:BoundField>
+                            <asp:BoundField DataField="line" SortExpression="line" HeaderText="Line" HeaderStyle-HorizontalAlign="Center" />
+                            <asp:BoundField DataField="supplier" SortExpression="supplier" HeaderText="Supplier" HeaderStyle-HorizontalAlign="Center" />
+                            <asp:BoundField DataField="supplier_name" SortExpression="supplier_name" HeaderText="Supplier_name" HeaderStyle-HorizontalAlign="Center" />
+                            <asp:BoundField DataField="item_number" SortExpression="item_number" HeaderText="Item Number" HeaderStyle-HorizontalAlign="Center" />
+                            <asp:BoundField DataField="description" SortExpression="description" HeaderText="Description" HeaderStyle-HorizontalAlign="Center" />
+                            <asp:BoundField DataField="required_qty" SortExpression="required_qty" HeaderText="Qty Required" HeaderStyle-HorizontalAlign="Center" />
+                            <asp:BoundField DataField="due_date" SortExpression="due_date" HeaderText="Due Date" HeaderStyle-HorizontalAlign="Center" DataFormatString="{0:MM/dd/yyyy}" />
+                            <asp:BoundField DataField="status_id" SortExpression="status_id" HeaderText="status_id" HeaderStyle-HorizontalAlign="Center" Visible="false" />
+                            <asp:BoundField DataField="status" SortExpression="status" HeaderText="Status" HeaderStyle-HorizontalAlign="Center" />
+                        </Columns>
+                        <FooterStyle BackColor="#e9ecef" Font-Bold="True" />
+                        <HeaderStyle BackColor="#e9ecef" HorizontalAlign="Center" />
+                        <PagerStyle CssClass="pageStyle" HorizontalAlign="Center" />
+                    </asp:GridView>
+                </div>
+                <%-- ------------------End Browse----------------------------%>   
             </div>
         </ContentTemplate>
     </asp:UpdatePanel>
-    <%-- ------------------End Browse----------------------------%>
+    
 
     <%--    <script type="text/javascript">
         document.getElementById('TERPContentPlaceHolder_txtDateForm').setAttribute('readonly', true);
