@@ -716,7 +716,7 @@ namespace TERP.Forms.PMS
             GridViewRow row = (GridViewRow)((TextBox)sender).Parent.Parent;
             string id = row.Cells[0].Text.Trim();
 
-            if (Tools.VerifyNumber(ordered_qty, Tools.TYPE_DOUBLE))
+            if (Tools.VerifyNumber(ordered_qty, Tools.TYPE_DOUBLE) && !(ordered_qty.Contains(',')))
             {
                 string sql = "UPDATE PMS_master_pr_temp SET ordered_qty='" + ordered_qty + "' WHERE id='" + id + "'";
                 dsPRMaintDetailModal.UpdateCommand = sql;
@@ -738,7 +738,7 @@ namespace TERP.Forms.PMS
             GridViewRow row = (GridViewRow)((TextBox)sender).Parent.Parent;
             string id = row.Cells[0].Text.Trim();
 
-            if (Tools.VerifyNumber(required_qty, Tools.TYPE_DOUBLE))
+            if (Tools.VerifyNumber(required_qty, Tools.TYPE_DOUBLE) && !(required_qty.Contains(',')))
             {
                 string sql = "UPDATE PMS_master_pr_temp SET required_qty='" + required_qty + "' WHERE id='" + id + "'";
                 dsPRMaintDetailModal.UpdateCommand = sql;
@@ -760,7 +760,7 @@ namespace TERP.Forms.PMS
             GridViewRow row = (GridViewRow)((TextBox)sender).Parent.Parent;
             string id = row.Cells[0].Text.Trim();
 
-            if (Tools.VerifyNumber(unit_cost, Tools.TYPE_DOUBLE))
+            if (Tools.VerifyNumber(unit_cost, Tools.TYPE_DOUBLE) && !(unit_cost.Contains(',')) )
             {
                 string sql = "UPDATE PMS_master_pr_temp SET unit_cost='" + unit_cost + "' WHERE id='" + id + "'";
                 dsPRMaintDetailModal.UpdateCommand = sql;
@@ -782,7 +782,7 @@ namespace TERP.Forms.PMS
             GridViewRow row = (GridViewRow)((TextBox)sender).Parent.Parent;
             string id = row.Cells[0].Text.Trim();
 
-            if (Tools.VerifyNumber(disc, Tools.TYPE_DOUBLE))
+            if (Tools.VerifyNumber(disc, Tools.TYPE_DOUBLE) && !(disc.Contains(',')))
             {
                 string sql = "UPDATE PMS_master_pr_temp SET disc='" + disc + "' WHERE id='" + id + "'";
                 dsPRMaintDetailModal.UpdateCommand = sql;

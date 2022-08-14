@@ -7,7 +7,7 @@
 
 .top {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -16,7 +16,7 @@
 }
 
 .create {
-    padding: 20px 50px 20px 0;
+    margin-right:20px;
 }
 
 .create-button {
@@ -50,22 +50,25 @@
 }
 
 .actions-list {
-    text-align: center;
-    margin-top: 8px;
+    /*text-align: center;
+    margin-top: 8px;*/
+    display:flex;
+    align-items:flex-end;
+    flex-direction:column;
 }
 
-.actions-item > input {
-    height: 34px;
+.actions-item {
+    margin: 8px 0;
 }
 
-.actions-item input:first-child {
+/*.actions-item input:first-child {
     margin-top: 2px;
     margin-bottom: 4px;
 }
 
 .actions-item:first-child{
    margin-bottom: 17px;
-}
+}*/
 
 .actions-button {
     width: 120px;
@@ -183,6 +186,7 @@
     border: 1px solid #b9c3c5;
     padding: 10px;
     border-radius: 5px;
+    margin-bottom:25px;
 }
 
 .fieldSet_legend {
