@@ -13,14 +13,15 @@
                 <asp:Label ID="POBrowse_lblModuleTitle" runat="server" Text="Purchase Order Browse" Font-Bold="True" CssClass="h4"></asp:Label>
             </div>
 
-            <%-- Filter Sreach --%>
+            
             <div class="row">
                 <div class="col-md-12">
                     <div class="card card-border card-boxshadow">
-                        <div class="card-body">
+                        <div class="card-body" style="overflow: auto;">
+                            <%-- Filter Sreach --%>
                             <fieldset class="fieldSet">
                                 <legend class="fieldSet_legend">
-                                    <asp:Label runat="server" ID="POBrowse_fieldSetFilter" Text="Filter"></asp:Label>
+                                    <asp:Label runat="server" ID="POBrowse_fieldSetFilter" Text="Filter Condition"></asp:Label>
                                 </legend>
                                 <div class="row">
                                     <div class="col-12 col-sm-12 col-md-6 col-lg-4 d-flex justify-content-between align-items-center form-group">
@@ -77,21 +78,13 @@
                                     </div>
                                 </div>
                             </fieldset>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <%-- Grid View --%>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="card card-border card-boxshadow mt-3">
-                        <div class="card-body" style="overflow: auto;">
+                        
+                            <%-- Grid View --%>
                             <div class="d-flex align-items-center rowperpage-modify">
                                 <asp:Label ID="POBrowse_lblRecordPerPage" runat="server" Text="Record per Page" CssClass="mr-3"></asp:Label>
                                 <asp:DropDownList ID="ddRecordPerPage" runat="server" CssClass="" DataSourceID="dsRowPerPage" DataTextField="value" DataValueField="value" AutoPostBack="True" OnSelectedIndexChanged="ddRecordPerPage_SelectedIndexChanged" />
                                 &nbsp;/&nbsp;
-                        <asp:Label ID="lblTotal" runat="server" Text="0" CssClass="mr-3"></asp:Label>
+                                <asp:Label ID="lblTotal" runat="server" Text="0" CssClass="mr-3"></asp:Label>
                             </div>
                             <div class="grid-wrapper">
                                 <asp:GridView ID="grPOBrowse" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" ShowHeaderWhenEmpty="True" CssClass="table table-bordered table-modify" AllowPaging="True" DataSourceID="dsPOBrowse">
@@ -118,7 +111,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> 
         </ContentTemplate>
     </asp:UpdatePanel>
 

@@ -232,7 +232,8 @@ namespace TERP.Forms.PMS
         protected void PRImport_btQuery_Click(object sender, EventArgs e)
         {
             string field = "pr_no,supplier,supplier_name,ship_to,request_by,purchaser_email,site_name,request_date,approval_code,send_email,status_id,line," +
-                "item_number,description,um,prod_line,type,required_qty,unit_cost,disc,need_date,due_date,upload_time,upload_by";
+                "item_number,description,um,prod_line,type,required_qty,unit_cost,disc,need_date,due_date,upload_time,upload_by,create_time,create_by";
+
             if (fileUpload.HasFile)
             {
                 if (fileUpload.FileName.Substring(fileUpload.FileName.Length - 4).ToLower().IndexOf("csv") < 0)
@@ -271,6 +272,8 @@ namespace TERP.Forms.PMS
                         dt.Columns.Add("due_date");
                         dt.Columns.Add("upload_time");
                         dt.Columns.Add("upload_by");
+                        dt.Columns.Add("create_time");
+                        dt.Columns.Add("create_by");
 
                         DataRow dr;
                         string[] fields;
@@ -303,6 +306,8 @@ namespace TERP.Forms.PMS
                             dr["request_date"] = fields[7].ToString().Trim();
                             dr["approval_code"] = fields[8].ToString().Trim();
                             dr["send_email"] = fields[9].ToString().Trim();
+                            
+
                             switch (fields[10].ToString().Trim().ToUpper())
                             {
                                 case "APPROVE":
@@ -328,6 +333,8 @@ namespace TERP.Forms.PMS
                             dr["due_date"] = fields[21].ToString().Trim();
                             dr["upload_time"] = DateTime.Now.ToString("MM/dd/yyyy");
                             dr["upload_by"] = tERPSession.User_id;
+                            dr["create_time"] = dr["upload_time"];
+                            dr["create_by"] = dr["upload_by"];
 
                             dt.Rows.Add(dr);
                         }

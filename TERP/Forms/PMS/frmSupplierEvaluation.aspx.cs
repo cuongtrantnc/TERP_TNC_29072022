@@ -29,5 +29,10 @@ namespace TERP.Forms.PMS
         {
             ScriptManager.RegisterStartupScript(this, this.GetType(), "#SupplierEvaluationForm", "showSupplierEvaluation_Form();", true);
         }
+
+        protected void btnPrintSupplierEvaluation_Click(object sender, ImageClickEventArgs e)
+        {
+            HttpContext.Current.Response.Redirect("frmSupplierEvaluationReport.aspx");
+        }
     }
 }

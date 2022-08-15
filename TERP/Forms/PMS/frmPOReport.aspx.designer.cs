@@ -22,39 +22,21 @@ namespace TERP.Forms.PMS {
         protected global::System.Web.UI.WebControls.Label POReport_lblModuleTitle;
         
         /// <summary>
-        /// POReport_lblModule control.
+        /// CrystalReportViewer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label POReport_lblModule;
+        protected global::CrystalDecisions.Web.CrystalReportViewer CrystalReportViewer;
         
         /// <summary>
-        /// ddModule control.
+        /// CrystalReportSource control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddModule;
-        
-        /// <summary>
-        /// POReport_btQuery control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button POReport_btQuery;
-        
-        /// <summary>
-        /// dsModule control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource dsModule;
+        protected global::CrystalDecisions.Web.CrystalReportSource CrystalReportSource;
     }
 }

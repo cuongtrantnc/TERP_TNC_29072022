@@ -7,13 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TERP.Forms.PMS
-{
-
-
-    public partial class frmPOImport
-    {
-
+namespace TERP.Forms.PMS {
+    
+    
+    public partial class frmPOImport {
+        
         /// <summary>
         /// POImport_lblModuleTitle control.
         /// </summary>
@@ -22,7 +20,7 @@ namespace TERP.Forms.PMS
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label POImport_lblModuleTitle;
-
+        
         /// <summary>
         /// POImport_lblDesc control.
         /// </summary>
@@ -31,7 +29,7 @@ namespace TERP.Forms.PMS
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label POImport_lblDesc;
-
+        
         /// <summary>
         /// fileUpload control.
         /// </summary>
@@ -40,7 +38,7 @@ namespace TERP.Forms.PMS
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.FileUpload fileUpload;
-
+        
         /// <summary>
         /// POImport_lblNote control.
         /// </summary>
@@ -49,7 +47,7 @@ namespace TERP.Forms.PMS
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label POImport_lblNote;
-
+        
         /// <summary>
         /// POImport_lblComment control.
         /// </summary>
@@ -58,7 +56,7 @@ namespace TERP.Forms.PMS
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label POImport_lblComment;
-
+        
         /// <summary>
         /// POImport_link control.
         /// </summary>
@@ -67,7 +65,7 @@ namespace TERP.Forms.PMS
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label POImport_link;
-
+        
         /// <summary>
         /// POImport_btQuery control.
         /// </summary>
@@ -76,16 +74,7 @@ namespace TERP.Forms.PMS
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button POImport_btQuery;
-
-        /// <summary>
-        /// POImport_btLink control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton POImport_btLink;
-
+        
         /// <summary>
         /// dsTemp control.
         /// </summary>

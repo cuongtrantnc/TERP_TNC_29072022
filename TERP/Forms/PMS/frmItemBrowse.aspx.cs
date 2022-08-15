@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -146,12 +147,29 @@ namespace TERP.Forms.PMS
 
         protected void ItemBrowse_btConfirm_Click(object sender, EventArgs e)
         {
-            string item_number = (string)HttpContext.Current.Session["txtItemNumber"];
+            //string item_number = (string)HttpContext.Current.Session["txtItemNumber"];
 
-            dsItemBrowse.DeleteCommand = "DELETE FROM PMS_master_item WHERE item_number='" + item_number + "'";
-            dsItemBrowse.Delete();
-            lblTotal.Text = DbHelper.getRowCount(dsItemBrowse);
-            HttpContext.Current.Session["txtItemNumber"] = null;
+            //dsItemBrowse.DeleteCommand = "DELETE FROM PMS_master_item WHERE item_number='" + item_number + "'";
+            //dsItemBrowse.Delete();
+            //lblTotal.Text = DbHelper.getRowCount(dsItemBrowse);
+            //HttpContext.Current.Session["txtItemNumber"] = null;
+
+            string item_number = (string)HttpContext.Current.Session["txtItemNumber"];
+            string query = "select po_no from PMS_master_po where item_desc = '" + item_number + "' union select pr_no from PMS_master_pr where item_number = '" + item_number + "' ";
+            DataRow dr = DbHelper.getDataRow(query, dsTemp.ConnectionString);
+            if (dr != null)
+            {
+                HttpContext.Current.Session["txtItemNumber"] = null;
+                (new Mess(this)).ShowMessage("Item has been used and cannot be deleted", Mess.TYPE_ERROR);
+            }
+            else
+            {
+                dsItemBrowse.DeleteCommand = "DELETE FROM PMS_master_item WHERE item_number='" + item_number + "'";
+                dsItemBrowse.Delete();
+                lblTotal.Text = DbHelper.getRowCount(dsItemBrowse);
+                HttpContext.Current.Session["txtItemNumber"] = null;
+                (new Mess(this)).ShowMessage(" successfully delete", Mess.TYPE_SUCCESS);
+            }
         }
 
         protected void ddRecordPerPage_SelectedIndexChanged(object sender, EventArgs e)
