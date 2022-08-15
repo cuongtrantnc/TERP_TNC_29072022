@@ -1,0 +1,154 @@
+﻿
+/*CSS form APPROVAL MAINT*/
+
+/*.btncreate {
+    width: 100%;
+    margin-top: 30px;
+}*/
+:root {
+    --fontsize: 0.85 rem;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Create{
+    margin-right:20px;
+}
+
+.Create-button {
+    width: 120px;
+}
+
+.modal-container {
+    max-width: 700px;
+}
+
+.form-item-top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.form-item-top-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 220px;
+}
+
+.form-item-top-left > span {
+    min-width: 120px;
+    font-weight: bold;
+    text-align: end;
+    margin-right: 10px;
+}
+
+.form-item-top-left > input {
+    max-width: 100px;
+}
+
+.form-item-top-right {
+    margin-left: 30px;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-item-top-right > span {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.form-item-bottom {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.form-item-bottom > span {
+    min-width: 120px;
+    font-weight: bold;
+    text-align: end;
+    margin-right: 10px;
+}
+
+.control {
+    width: 100%;
+}
+
+.control > input {
+    width: 100%;
+}
+
+.filter {
+    padding: 20px;
+}
+
+.filter-item {
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+    padding: 5px;
+}
+
+.filter-item > span {
+    width: 150px;
+    text-align: right;
+    margin-right: 5px;
+    font-weight: 500;
+}
+
+.grid-wrapper {
+    max-height: 510px;
+    overflow: auto;
+}
+
+.table.table-modify > tbody {
+    position: relative;
+}
+
+.table.table-modify > tbody > tr:first-child {
+    position: sticky;
+    top: -1px;
+    left: 0;
+}
+
+.table.table-modify .rowstyle td {
+    padding: 3px;
+}
+
+.rowperpage-modify {
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.button-font-size {
+   font-size: var(--fontsize);
+}
+
+.fieldSet {
+    /*37ad52*/
+    border: 1px solid #b9c3c5;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 25px;
+}
+
+.fieldSet_legend {
+    width: auto;
+    border-bottom: none;
+    padding-right: 10px;
+    padding-left: 10px;
+    
+    color: #37ad52;
+    font-family: helvetica, arial, sans-serif;
+    font-size: var(--fontsize);
+}
+
+.rowButton-modal:first-child {
+    margin-right: 15px;
+}

@@ -1,0 +1,21 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+$border-radius: 12px;
+
+
+
+
+.charts {
+    padding-top: 20px;
+
+    &__item {
+        border-radius: $border-radius;
+
+        &--header {
+            border-top-left-radius: $border-radius;
+            border-top-right-radius: $border-radius;
+        }
+    }
+}

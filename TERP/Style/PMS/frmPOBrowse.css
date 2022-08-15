@@ -1,0 +1,77 @@
+﻿
+/* CSS for frmPOBrowse menu */
+
+:root {
+    --fontsize: 0.85 rem;
+}
+
+.Filter__label {
+    font-weight: 500;
+}
+
+.rowButton {
+    width: 120px;
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.actions input:first-child {
+    margin-right: 10px !important;
+}
+
+.grid-wrapper {
+    max-height: 510px;
+    overflow: auto;
+}
+
+.table.table-modify > tbody {
+    position: relative;
+}
+
+.table.table-modify > tbody > tr:first-child {
+    position: sticky;
+    top: -1px;
+    left: 0;
+}
+
+.table.table-modify .rowstyle td {
+    padding: 3px;
+}
+
+.rowperpage-modify {
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.button-font-size {
+    font-size: var(--fontsize);
+}
+
+.fieldSet {
+    /*37ad52*/
+    border: 1px solid #b9c3c5;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom:25px;
+}
+
+.fieldSet_legend {
+    width: auto;
+    border-bottom: none;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-bottom: 0;
+    color: #37ad52;
+    font-family: helvetica, arial, sans-serif;
+    font-size: var(--fontsize);
+}
+
+@media screen and (max-width:766px) {
+    .rowButton {
+        width: 100%;
+    }
+}

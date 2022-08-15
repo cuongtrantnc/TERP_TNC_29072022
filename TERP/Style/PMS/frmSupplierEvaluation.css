@@ -1,0 +1,259 @@
+﻿
+/* Style menu Supplier Maintenance */
+
+:root {
+    --fontsize: 0.85rem;
+    --button_width: 120px;
+}
+
+.title_label {
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.header-menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.action{
+    margin-right:20px;
+}
+
+.action_button {
+    min-width: 120px;
+    font-size: var(--fontsize);
+}
+
+.action_button--modify {
+    margin-right: 10px;
+}
+
+
+.action_button-hide {
+    display: none;
+}
+
+
+.filter_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    font-size: var(--fontsize);
+}
+
+.filter_item > input, .filter_item > select {
+    font-size: var(--fontsize);
+}
+
+.filter_action {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.filter_button {
+    min-width: 120px;
+    font-size: var(--fontsize);
+}
+
+.filter_button-modifile {
+    margin: 10px 0;
+}
+
+.filter_label {
+    text-align: right;
+    width: 50% !important;
+}
+
+.filter_label--modify {
+    margin-right: calc(19px + 5.5px);
+}
+
+.filter_labelselect2 {
+    margin-right: calc(19px + 0.5px);
+}
+
+/* stlye for FORM */
+.filter_frmlabel--modify {
+    margin-right: calc(30px + 6.26px);
+}
+
+.filter_frmlabelselect2 {
+    margin-right: calc(30px + 1.26px);
+}
+/* end style for FORM */
+
+.span_require {
+    vertical-align: middle;
+    line-height: normal;
+    margin-left: 10px;
+    margin-right: 20px;
+    color: red;
+}
+
+.fieldSet {
+    /*37ad52*/
+    border: 1px solid #b9c3c5;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.fieldSet_legend {
+    width: auto;
+    border-bottom: none;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-bottom: 0;
+    color: #37ad52;
+    font-family: helvetica, arial, sans-serif;
+    font-size: 15px;
+}
+
+
+.banking {
+    text-align: right;
+    margin: 10px 0;
+}
+
+.banking_button {
+    font-size: var(--fontsize);
+    width: var(--button_width);
+}
+
+span > input {
+    vertical-align: bottom;
+    text-align: center;
+}
+
+.supplier_form {
+    display: none;
+}
+
+.supplier_filter {
+    display: none;
+}
+
+.supplier_import {
+    display: none;
+}
+
+
+.grview {
+    font-size: var(--fontsize);
+}
+
+
+.grview-browse > tbody > tr:first-child > th:first-child {
+    width: 15%;
+}
+
+.grview-browse > tbody > tr:first-child > th:nth-child(2) {
+    width: 20%;
+}
+
+.grview-browse > tbody > tr:first-child > th:nth-child(3) {
+    width: 20%;
+}
+
+.grview-browse > tbody > tr:first-child > th:nth-child(4) {
+    width: 20%;
+}
+
+.grview-browse > tbody > tr:first-child > th:nth-child(5) {
+    width: 20%;
+}
+
+.grview-browse > tbody > tr:first-child > th:nth-child(6) {
+    width: 5%;
+}
+
+.grview-browse > tbody > tr:first-child > th:last-child {
+    width: 5%;
+}
+
+
+.grview-create > tbody > tr:first-child > th:first-child {
+    width: 7%;
+}
+
+.grview-create > tbody > tr:first-child > th:nth-child(2) {
+    width: 36%;
+}
+
+.grview-create > tbody > tr:first-child > th:nth-child(3) {
+    width: 36%;
+}
+
+.grview-create > tbody > tr:first-child > th:nth-child(4) {
+    width: 10%;
+}
+
+.grview-create > tbody > tr:first-child > th:last-child {
+    width: 10%;
+}
+
+.grview_ctldelete {
+    font-size: var(--fontsize);
+}
+
+.grview_header {
+    width: 1%;
+    white-space: nowrap;
+}
+
+
+.paging {
+    display: flex;
+    align-items: center;
+    font-size: var(--fontsize);
+    margin-top: 25px
+}
+
+.paging_record {
+    width: 60px;
+    height: 21px;
+}
+
+.form-control {
+    height: 2.15rem;
+    font-size: var(--fontsize) !important;
+}
+
+
+.select2-container--default .select2-selection--single {
+    height: 2.15rem;
+}
+
+.select2-search__field {
+    font-size: var(--fontsize);
+}
+
+.invalid-feedback-mod {
+    display: none;
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 80%;
+    color: #dc3545;
+    margin-left: calc(100% - 64%);
+}
+
+.dr-validation {
+    display: block !important;
+    border: 1.5px solid red !important;
+}
+
+@media screen and (max-width:1023px) {
+    .filter_action {
+        flex-direction: row;
+    }
+
+    .filter_button {
+        width: 100%;
+    }
+
+    .filter_button:first-child {
+        margin-right: 10px;
+    }
+}

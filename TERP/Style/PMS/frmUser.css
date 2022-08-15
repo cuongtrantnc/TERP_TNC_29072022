@@ -1,0 +1,123 @@
+﻿
+/* Style for menu User Mainternance */
+
+:root {
+    --fontsize: 0.85 rem;
+}
+
+
+input[type=file]::-webkit-file-upload-button {
+    color: #ffffff;
+    border: none;
+    padding: 6px 12px;
+    background: #28a745 linear-gradient(180deg, #48b461, #28a745) repeat-x !important;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-label {
+    font-weight: 500;
+}
+
+.sign {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    margin-top: auto;
+    padding: 20px;
+    position:relative;
+}
+
+.sign:before {
+    content: '';
+    position: absolute;
+    top: 14%;
+    left: 0;
+    height: 270px;
+    width: 1px;
+    background-color: rgba(0, 0, 0, 0.125);
+}
+
+.sign_label{
+    display:block;
+    margin: 8px 0;
+    font-weight:500;
+}
+
+.sign_image {
+    height:240px;
+    width:100%;
+    padding: 10px;
+
+    text-align:center;
+    background-color: #ffffff;
+    border: 1px dashed #dbdde0;
+    border-radius: 10px;
+}
+
+.sign_image img {
+    max-width: 100%;
+    max-height: 220px;
+    object-fit: cover;
+}
+
+
+.sign_note {
+    font-size: 0.85rem;
+    font-style: italic;
+    display: block;
+    margin: 8px 0;
+}
+
+.sign_action{
+    display:block;
+}
+
+
+.paging {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 7px 0;
+}
+
+.paging_record {
+    width: 60px;
+    height: 21px;
+}
+
+.grid-wrapper {
+    max-height: 515px;
+    overflow: auto;
+}
+
+.table.table-bordered > tbody {
+    position: relative;
+}
+
+.table.table-bordered > tbody > tr:first-child {
+    position: sticky;
+    top: -1px;
+    left: 0;
+}
+
+.rowstyle td {
+    padding: 3px;
+}
+
+.rowperpage-modify {
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.button-font-size {
+    font-size: var(--fontsize);
+}
+
+@media screen and (max-width: 576px){
+    .sign:before{
+        display:none;
+    }
+}
